@@ -1,4 +1,3 @@
-vb
 'Written for games that use Megafiles.
 'Command & Conquer™ Remastered Collection https://store.steampowered.com/app/1213210
 '8-Bit Hordes https://store.steampowered.com/app/497850
