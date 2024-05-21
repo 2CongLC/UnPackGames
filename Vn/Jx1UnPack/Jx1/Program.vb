@@ -30,7 +30,7 @@ Module Program
             Dim data_offset as Int32 = br.ReadInt32 ' Size of Header
             Console.WriteLine("Data Offset : {0}", data_offset)
             Dim crc32 as Int32 = br.ReadInt32
-            Console.WriteLine("Crc32 : {0},crc32)
+            Console.WriteLine("Crc32 : {0}",crc32)
             Dim reserved as String = Encoding.GetEncoding("gbk").GetString(br.ReadBytes(12))
             Console.WriteLine("Reserved : {0}", reserved)
                 
