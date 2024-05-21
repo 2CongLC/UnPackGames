@@ -7,13 +7,14 @@ Imports System.IO
 If New String(System.Text.Encoding.ASCII.GetString(br.ReadBytes(4)) <> "PACK" Then
                 Throw New Exception("This is not an Jx1 Online")
             End If
-Dim fileCount As Integer = br.ReadUint64()
+Dim fileCount Uint64 = br.ReadUint64()
      Dim subfiles As New list(of header)
-      For i As Integer = 0 To fileCount - 1
+      For i As UInt64 = 0 To fileCount - 1
       subfiles.Add(New Subfile() With {
             .index_offset = br.ReadUint64(),
             .data_offset = br.ReadUint64(),
-            .crc32 = br.ReadUint64()})
+            .crc32 = br.ReadUint64(),
+            .reserved = br.ReadChars(12)})
       Next
   
   
