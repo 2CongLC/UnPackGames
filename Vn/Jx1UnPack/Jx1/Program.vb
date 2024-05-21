@@ -23,12 +23,15 @@ Module Program
             br = New BinaryReader(File.OpenRead(input))
             Dim signature As String = Encoding.ASCII.GetString(br.ReadBytes(4))
             Console.WriteLine("signature : {0}", signature)
-            Dim filecount As Int32 = br.ReadInt32
-            Console.WriteLine("filecount : {0}", filecount)
-            Console.WriteLine()
-
+            Dim count As Int32 = br.ReadInt32
+            Console.WriteLine("count : {0}", count)
+            Dim index_offset as Int32 = br.ReadInt32
+            Console.WriteLine("Index Offset {0}",index_offset)
+            Dim data_offset as Int32 = br.ReadInt32
+            Console.WriteLine("data Offset {0},data_offset)
+            
             Dim subtables As New List(Of TableData)()
-            For i As Int32 = 0 To filecount - 1
+            For i As Int32 = 0 To count - 1
                 subtables.Add(
                     New TableData
                 )
