@@ -8,20 +8,26 @@ If New String(System.Text.Encoding.ASCII.GetString(br.ReadBytes(4)) <> "PACK" Th
                 Throw New Exception("This is not an Jx1 Online")
             End If
 Dim fileCount Uint64 = br.ReadUint64()
-     Dim subfiles As New list(of header)
+     Dim subtables As New list(of TableData)()
       For i As UInt64 = 0 To fileCount - 1
-      subfiles.Add(New Subfile() With {
+      subtables.Add(New TableData() With {
             .index_offset = br.ReadUint64(),
             .data_offset = br.ReadUint64(),
             .crc32 = br.ReadUint64(),
             .reserved = br.ReadChars(12)})
       Next
-  
-  
+ Dim subfiles as New List(of FileData)()
+ For Each td as TableData In Subtables
+  br.BaseStream.Position = td.index_offset
+    subfiles.Add(New FileData() With {
+          .id = br.ReadUint64(),
+          .offset = br.ReadUint64(),
+          .size = br.ReadInt64(),
+          .compress_size = br.ReadInt64()})             
   End Sub
 
   
-Class Header
+Class TableData
 'Public signature as String ' Offset = 0, Length = 4
 'Public count as ULong ' Offset = 4, Length = 8
 Public index_offset as ULong  ' Offset = 12, Length = 8  
@@ -30,7 +36,7 @@ Public crc32 as ULong ' Offet = 28, Length = 8
 Public reserved as String 'Offset = 36, Length = 12   
 End Class
 
-Class IndexItems
+Class FileData
 Public id as ULong
 Public offset as ULong
 Public size as Long
