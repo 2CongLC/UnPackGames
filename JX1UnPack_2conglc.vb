@@ -23,7 +23,16 @@ Dim fileCount Uint64 = br.ReadUint64()
           .id = br.ReadUint64(),
           .offset = br.ReadUint64(),
           .size = br.ReadInt64(),
-          .compress_size = br.ReadInt64()})             
+          .compress_size = br.ReadInt64()}) 
+          Next
+      Dim path As String = Path.GetDirectoryName(args(0)) & "//" & Path.GetFileNameWithoutExtension(args(0))
+      Directory.CreateDirectory(path)
+        For Each f as FileData in subfiles
+           br.BaseStream.Position = f.offset
+            using bw As New BinaryWriter(File.Create(path & "//" & f.id))
+                bw.Write(br.ReadBytes(f.size))
+            end using    
+         Next   
   End Sub
 
   
