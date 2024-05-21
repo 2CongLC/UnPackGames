@@ -25,7 +25,15 @@ Module Program
             Console.WriteLine("signature : {0}", signature)
             Dim count As Int32 = br.ReadInt32
             Console.WriteLine("count : {0}", count)
-            br.BaseStream.Position = br.ReadInt32
+            Dim index_offset as Int32 = br.ReadInt32
+            Console.WriteLine("Index Offset : {0}",index_offset)
+            Dim data_offset as Int32 = br.ReadInt32 ' Size of Header
+            Console.WriteLine("Data Offset : {0}", data_offset)
+            Dim crc32 as Int32 = br.ReadInt32
+            Console.WriteLine("Crc32 : {0},crc32)
+            Dim reserved as String = Encoding.GetEncoding("gbk").GetString(br.ReadBytes(12))
+            Console.WriteLine("Reserved : {0}", reserved)
+                
             Dim subfiles As New List(Of FileData)()
             For i As Int32 = 0 To count - 1
                 subfiles.Add(
