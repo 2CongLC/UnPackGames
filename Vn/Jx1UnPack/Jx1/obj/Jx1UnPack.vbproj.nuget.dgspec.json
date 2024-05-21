@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Cong-20-03-2024\\VBNet\\ConsoleApp1\\Jx1\\Jx1UnPack.vbproj": {}
+    "D:\\Source VBNet_C#\\GitHub\\UnPackGames\\Vn\\Jx1UnPack\\Jx1\\Jx1UnPack.vbproj": {}
   },
   "projects": {
-    "D:\\Cong-20-03-2024\\VBNet\\ConsoleApp1\\Jx1\\Jx1UnPack.vbproj": {
+    "D:\\Source VBNet_C#\\GitHub\\UnPackGames\\Vn\\Jx1UnPack\\Jx1\\Jx1UnPack.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Cong-20-03-2024\\VBNet\\ConsoleApp1\\Jx1\\Jx1UnPack.vbproj",
+        "projectUniqueName": "D:\\Source VBNet_C#\\GitHub\\UnPackGames\\Vn\\Jx1UnPack\\Jx1\\Jx1UnPack.vbproj",
         "projectName": "Jx1UnPack",
-        "projectPath": "D:\\Cong-20-03-2024\\VBNet\\ConsoleApp1\\Jx1\\Jx1UnPack.vbproj",
+        "projectPath": "D:\\Source VBNet_C#\\GitHub\\UnPackGames\\Vn\\Jx1UnPack\\Jx1\\Jx1UnPack.vbproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Cong-20-03-2024\\VBNet\\ConsoleApp1\\Jx1\\obj\\",
+        "outputPath": "D:\\Source VBNet_C#\\GitHub\\UnPackGames\\Vn\\Jx1UnPack\\Jx1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
