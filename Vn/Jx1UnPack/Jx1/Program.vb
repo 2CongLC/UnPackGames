@@ -25,10 +25,7 @@ Module Program
             Console.WriteLine("signature : {0}", signature)
             Dim count As Int32 = br.ReadInt32
             Console.WriteLine("count : {0}", count)
-            Dim index_offset as Int32 = br.ReadInt32
-            Console.WriteLine("Index Offset {0}",index_offset)
-            Dim data_offset as Int32 = br.ReadInt32
-            Console.WriteLine("data Offset {0},data_offset)
+            br.BaseStream.Position = br.ReadInt32
             
             Dim subtables As New List(Of TableData)()
             For i As Int32 = 0 To count - 1
