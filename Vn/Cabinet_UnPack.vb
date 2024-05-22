@@ -108,7 +108,7 @@ Module Program
       Public [date] As UShort ' date stamp for this file
       Public time As UShort ' time stamp for this file
       Public attribs As UShort ' attribute flags for this file
-      Public szName As Byte() ' name of this file
+      Public szName As String ' name of this file
 
         Public Sub New()
             cbFile = br.ReadUInt32
@@ -117,8 +117,7 @@ Module Program
             [date] = br.ReadUInt16
             time = br.ReadUInt16
             attribs = br.ReadUInt16
-            'szName = 
-
+            szName = br.ReadString
         End Sub
     End Class
 
