@@ -30,7 +30,6 @@ Module Program
             Dim nFileCount as Int32 = br.ReadInt32
             Console.WriteLine("Total Files : {0},nFileCount)
             Dim nSizeOfIndexTable as Int32 = br.ReadInt32
-            Console.WriteLine("Total Tables : {0},nSizeOfIndexTable)
             Dim nDataOffset as Int32 = br.ReadInt32
             Dim unknow3 as Int32 = br.ReadInt32
             Dim unknow4 as Int32 = br.ReadInt32
@@ -43,7 +42,7 @@ Module Program
             Next
 
             Dim subfiles As New List(Of FileData)()
-            For j As Int32 = 0 To nFileCount
+            For j As Int32 = 0 To nFileCount - 1
                 subfiles.Add(
                         New FileData
                 )
@@ -53,7 +52,7 @@ Module Program
             Directory.CreateDirectory(p & "//" & d)
             For Each f As FileData In subfiles
 
-                Console.WriteLine("File ID : {0} - File Offset : {1} - File Size : {2}", f.id, f.offset, f.size)
+                Console.WriteLine("File Offset : {0} - File Size : {1} - File Flag : {2}", f.offset, f.size, f.flag)
                 Using bw As New BinaryWriter(File.Create(p & "//" & d & "//" & f.id))
                     bw.Write(br.ReadBytes(f.size))
                 End Using
@@ -67,26 +66,26 @@ Module Program
 
     Class TableData
 
-        Public file_extension As String
-        Public file_info_offset As Int32
-        Public num_files As Int32
+        Public nHashA As String
+        Public nHashB As String
+        Public nExits As String
 
         Public Sub New()
-            file_extension = Encoding.GetEncoding("us-ascii").GetString(br.ReadBytes(4))
-            file_info_offset = br.ReadInt32
-            num_files = br.ReadInt32
+            HashA = Encoding.GetEncoding("us-ascii").GetString(br.ReadBytes(4))
+            HashB = Encoding.GetEncoding("us-ascii").GetString(br.ReadBytes(4))
+            Exits = Encoding.GetEncoding("us-ascii").GetString(br.ReadBytes(4))
         End Sub
     End Class
 
     Class FileData
-        Public id As Int32
         Public offset As Int32
         Public size As Int32
+        Public flag As Int32
 
         Public Sub New()
-            id = br.ReadInt32
             offset = br.ReadInt32
             size = br.ReadInt32
+            flag = br.ReadInt32
         End Sub
     End Class
 
