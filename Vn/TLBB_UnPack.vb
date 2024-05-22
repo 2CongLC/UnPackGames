@@ -53,7 +53,7 @@ Module Program
             For Each f As FileData In subfiles
 
                 Console.WriteLine("File Offset : {0} - File Size : {1} - File Flag : {2}", f.offset, f.size, f.flag)
-                Using bw As New BinaryWriter(File.Create(p & "//" & d & "//" & f.id))
+                Using bw As New BinaryWriter(File.Create(p & "//" & d & "//" & f.flag))
                     bw.Write(br.ReadBytes(f.size))
                 End Using
             Next
