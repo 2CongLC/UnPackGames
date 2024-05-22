@@ -44,7 +44,7 @@ Module Program
             Dim szDiskNext As Byte() ' (optional) name of next disk
 
             Dim subtables As New List(Of TableData)()
-            For i As Int32 = 0 To tablecount - 1
+            For i As Int32 = 0 To cFolders - 1
                 subtables.Add(
                     New TableData
                 )
