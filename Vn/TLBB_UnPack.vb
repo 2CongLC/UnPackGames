@@ -21,21 +21,20 @@ Module Program
         If IO.File.Exists(input) Then
 
             br = New BinaryReader(File.OpenRead(input))
-            Dim signature As String = Encoding.ASCII.GetString(br.ReadBytes(br.ReadInt32))
+            Dim signature As String = Encoding.ASCII.GetString(br.ReadBytes(4))
+            Console.Writeline("signature : {0},signature)
             Dim unknow1 as Int32 = br.ReadInt32
             Dim unknow2 as Int32 = br.ReadInt32
             Dim nHashTableOffset as Int32 = br.ReadIn32
             Dim nIndexTableOffset as Int32 = br.ReadInt32
+            Dim nFileCount as Int32 = br.ReadInt32
+            Console.WriteLine("Total Files : {0},nFileCount)
+            Dim nSizeOfIndexTable as Int32 = br.ReadInt32
+            Dim nDataOffset as Int32 = br.ReadInt32
+            Dim unknow3 as Int32 = br.ReadInt32
+            Dim unknow4 as Int32 = br.ReadInt32
             
-            Console.WriteLine("signature : {0}", signature)
-            Dim version As String = Encoding.ASCII.GetString(br.ReadBytes(4))
-            Console.WriteLine("version : {0}", version)
-            Dim types As String = Encoding.ASCII.GetString(br.ReadBytes(12))
-            Console.WriteLine("File Type : {0}", types)
-            Dim tablecount As Int32 = br.ReadInt32
-            Console.WriteLine("Table Count : {0}", tablecount)
-            Dim fileoffset As Int32 = br.ReadInt32
-            Console.WriteLine("File Offset : {0}", fileoffset)
+            
 
             Dim subtables As New List(Of TableData)()
             For i As Int32 = 0 To tablecount - 1
