@@ -21,16 +21,27 @@ Module Program
         If IO.File.Exists(input) Then
 
             br = New BinaryReader(File.OpenRead(input))
-            Dim copyrigth As String = Encoding.ASCII.GetString(br.ReadBytes(40))
-            Console.WriteLine("signature : {0}", copyrigth)
-            Dim version As String = Encoding.ASCII.GetString(br.ReadBytes(4))
-            Console.WriteLine("version : {0}", version)
-            Dim types As String = Encoding.ASCII.GetString(br.ReadBytes(12))
-            Console.WriteLine("File Type : {0}", types)
-            Dim tablecount As Int32 = br.ReadInt32
-            Console.WriteLine("Table Count : {0}", tablecount)
-            Dim fileoffset As Int32 = br.ReadInt32
-            Console.WriteLine("File Offset : {0}", fileoffset)
+            Dim signature As String = Encoding.ASCII.GetString(br.ReadBytes(3)) ' file signature
+            Dim reserved1 As UInteger = br.ReadUInt32 ' reserved
+            Dim cbCabinet As UInteger = br.ReadUInt32' size of this cabinet file in bytes
+            Dim reserved2 As UInteger = br.ReasUInt32 ' reserved
+            Dim coffFiles As UInteger = br.ReadUInt32 ' offset of the first CFFILE entry
+            Dim reserved3 As UInteger = br.ReadUInt32 ' reserved
+            Dim versionMinor As Byte = br.ReadByte ' cabinet file format version, minor
+            Dim versionMajor As Byte = br.ReadByte ' cabinet file format version, major
+            Dim cFolders As UShort = br.ReadUInt16 ' number of CFFOLDER entries in this cabinet
+            Dim cFiles As UShort = br.ReadUInt16 ' number of CFFILE entries in this cabinet
+            Dim flags As UShort = br.ReadUInt16 ' cabinet file option indicators
+            Dim setID As UShort = br.ReadUInt16 ' must be the same for all cabinets in a set
+            Dim iCabinet As UShort = br.ReadUInt16 ' number of this cabinet file in a set
+            Dim cbCFHeader As UShort = br.ReadUInt16 ' (optional) size of per-cabinet reserved area
+            Dim cbCFFolder As Byte = br.ReadByte ' (optional) size of per-folder reserved area
+            Dim cbCFData As Byte = br.ReadByte ' (optional) size of per-datablock reserved area
+            Dim abReserve As Byte() ' (optional) per-cabinet reserved area
+            Dim szCabinetPrev As Byte() ' (optional) name of previous cabinet file
+            Dim szDiskPrev As Byte() ' (optional) name of previous disk
+            Dim szCabinetNext As Byte() ' (optional) name of next cabinet file
+            Dim szDiskNext As Byte() ' (optional) name of next disk
 
             Dim subtables As New List(Of TableData)()
             For i As Int32 = 0 To tablecount - 1
