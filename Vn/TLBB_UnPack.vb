@@ -21,8 +21,13 @@ Module Program
         If IO.File.Exists(input) Then
 
             br = New BinaryReader(File.OpenRead(input))
-            Dim copyrigth As String = Encoding.ASCII.GetString(br.ReadBytes(40))
-            Console.WriteLine("signature : {0}", copyrigth)
+            Dim signature As String = Encoding.ASCII.GetString(br.ReadBytes(br.ReadInt32))
+            Dim unknow1 as Int32 = br.ReadInt32
+            Dim unknow2 as Int32 = br.ReadInt32
+            Dim nHashTableOffset as Int32 = br.ReadIn32
+            Dim nIndexTableOffset as Int32 = br.ReadInt32
+            
+            Console.WriteLine("signature : {0}", signature)
             Dim version As String = Encoding.ASCII.GetString(br.ReadBytes(4))
             Console.WriteLine("version : {0}", version)
             Dim types As String = Encoding.ASCII.GetString(br.ReadBytes(12))
