@@ -44,53 +44,36 @@ Module Program
             Dim szDiskNext As Byte() ' (optional) name of next disk
 
             Dim subtables As New List(Of TableData)()
-            For i As Int32 = 0 To cFolders - 1
+            For i As UInt16 = 0 To cFolders - 1
                 subtables.Add(
                     New TableData
                 )
             Next
 
-            Dim subfiles As New List(Of FileData)()
-            Dim d As String = Nothing
-            Console.WriteLine(" --------------- Table Format --------------------")
-            Console.WriteLine()
-
-            For Each td As TableData In subtables
-                Console.WriteLine("Extension : {0} -  File Offset : {1} - Num Of Files : {2} ", td.file_extension, td.file_info_offset, td.num_files)
-                For j As Int32 = 0 To td.num_files - 1
-                    subfiles.Add(
-                         New FileData
-                     )
-                Next
-
-                d = td.file_extension
-                p = Path.GetDirectoryName(input) & "//" & Path.GetFileNameWithoutExtension(input)
-                Directory.CreateDirectory(p & "//" & d)
+            Dim subfiles As New List(Of FileData)()        
+            For j as UInt16 = 0 To cFiles -1
+                subfiles.Add(
+                    New FileData
+                )
             Next
 
-            Console.WriteLine(" --------------- File List --------------------")
-            Console.WriteLine()
-
-
-            For Each f As FileData In subfiles
-
-                Console.WriteLine("File ID : {0} - File Offset : {1} - File Size : {2}", f.id, f.offset, f.size)
-                Using bw As New BinaryWriter(File.Create(p & "//" & d & "//" & f.id))
-                    bw.Write(br.ReadBytes(f.size))
-                End Using
+            Dim subdatas as New List(Of CFDATA)
+            For Each q As TableData In subtables
+              For k as UInt16 = 0 To q.cCFData - 1
+                  subdatas.Add(
+                    New CFDATA
+                )
+              Next
             Next
-            Console.WriteLine("UnPak Done !!!")
 
         End If
         Console.ReadLine()
     End Sub
 
-
     Class TableData
-
-      Public coffCabStart As UInteger ' offset of the first CFDATA block in this folder
-      Public cCFData As UShort ' number of CFDATA blocks in this folder
-      Public typeCompress As UShort ' compression type indicator
+      Public coffCabStart As UInt32 ' offset of the first CFDATA block in this folder
+      Public cCFData As UInt16 ' number of CFDATA blocks in this folder
+      Public typeCompress As UInt16 ' compression type indicator
       Public abReserve As Byte() ' (optional) per-folder reserved area
 
         Public Sub New()
@@ -102,12 +85,12 @@ Module Program
     End Class
 
     Class FileData
-      Public cbFile As UInteger ' uncompressed size of this file in bytes
-      Public uoffFolderStart As UInteger ' uncompressed offset of this file in the folder
-      Public iFolder As UShort ' index into the CFFOLDER area
-      Public [date] As UShort ' date stamp for this file
-      Public time As UShort ' time stamp for this file
-      Public attribs As UShort ' attribute flags for this file
+      Public cbFile As UInt32 ' uncompressed size of this file in bytes
+      Public uoffFolderStart As UInt32 ' uncompressed offset of this file in the folder
+      Public iFolder As UInt16 ' index into the CFFOLDER area
+      Public [date] As UInt16 ' date stamp for this file
+      Public time As UInt16 ' time stamp for this file
+      Public attribs As UInt16 ' attribute flags for this file
       Public szName As String ' name of this file
 
         Public Sub New()
@@ -122,11 +105,19 @@ Module Program
     End Class
 
     Class CFDATA
-      Public csum As UInteger ' checksum of this CFDATA entry
-      Public cbData As UShort ' number of compressed bytes in this block
-      Public cbUncomp As UShort ' number of uncompressed bytes in this block
+      Public csum As UInt32 ' checksum of this CFDATA entry
+      Public cbData As UInt16 ' number of compressed bytes in this block
+      Public cbUncomp As UInt16 ' number of uncompressed bytes in this block
       Public abReserve As Byte() ' (optional) per-datablock reserved area
       Public ab As Byte() ' compressed data bytes
+
+         Public Sub New()
+             csum = br.ReadUInt32
+             cbData = br.ReadUInt16
+             cbUncomp br.ReadUInt16
+             'abReserve = 
+             'ab = 
+         End Sub
     End Class
 
 End Module
