@@ -106,9 +106,17 @@ Module Program
             [date] = br.ReadUInt16
             time = br.ReadUInt16
             attribs = br.ReadUInt16
-            szName = 
+            'szName = 
 
         End Sub
+    End Class
+
+    Class CFDATA
+      Public csum As UInteger ' checksum of this CFDATA entry
+      Public cbData As UShort ' number of compressed bytes in this block
+      Public cbUncomp As UShort ' number of uncompressed bytes in this block
+      Public abReserve As Byte() ' (optional) per-datablock reserved area
+      Public ab As Byte() ' compressed data bytes
     End Class
 
 End Module
