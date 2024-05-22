@@ -80,7 +80,7 @@ Module Program
             coffCabStart = br.ReadUInt32
             cCFData = br.ReadUInt32
             typeCompress = br.ReadUInt16
-            'abReserve 
+            abReserve = br.ReadBytes(br.ReadInt32)
         End Sub
     End Class
 
@@ -108,15 +108,15 @@ Module Program
       Public csum As UInt32 ' checksum of this CFDATA entry
       Public cbData As UInt16 ' number of compressed bytes in this block
       Public cbUncomp As UInt16 ' number of uncompressed bytes in this block
-      Public abReserve As Byte() ' (optional) per-datablock reserved area
+      Public abReserve As Int32 ' (optional) per-datablock reserved area
       Public ab As Byte() ' compressed data bytes
 
          Public Sub New()
              csum = br.ReadUInt32
              cbData = br.ReadUInt16
              cbUncomp br.ReadUInt16
-             'abReserve = 
-             'ab = 
+             abReserve = br.ReadInt32
+             ab = br.ReadBytes(cbData)
          End Sub
     End Class
 
