@@ -30,14 +30,13 @@ Module Program
             Dim nFileCount as Int32 = br.ReadInt32
             Console.WriteLine("Total Files : {0},nFileCount)
             Dim nSizeOfIndexTable as Int32 = br.ReadInt32
+            Console.WriteLine("Total Tables : {0},nSizeOfIndexTable)
             Dim nDataOffset as Int32 = br.ReadInt32
             Dim unknow3 as Int32 = br.ReadInt32
             Dim unknow4 as Int32 = br.ReadInt32
             
-            
-
             Dim subtables As New List(Of TableData)()
-            For i As Int32 = 0 To tablecount - 1
+            For i As Int32 = 0 To nSizeOfIndexTable - 1
                 subtables.Add(
                     New TableData
                 )
