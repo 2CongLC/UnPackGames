@@ -43,27 +43,14 @@ Module Program
             Next
 
             Dim subfiles As New List(Of FileData)()
-            Dim d As String = Nothing
-            Console.WriteLine(" --------------- Table Format --------------------")
-            Console.WriteLine()
-
-            For Each td As TableData In subtables
-                Console.WriteLine("Extension : {0} -  File Offset : {1} - Num Of Files : {2} ", td.file_extension, td.file_info_offset, td.num_files)
-                For j As Int32 = 0 To td.num_files - 1
-                    subfiles.Add(
-                         New FileData
-                     )
-                Next
-
-                d = td.file_extension
-                p = Path.GetDirectoryName(input) & "//" & Path.GetFileNameWithoutExtension(input)
-                Directory.CreateDirectory(p & "//" & d)
+            For j As Int32 = 0 To nFileCount
+                subfiles.Add(
+                        New FileData
+                )
             Next
-
-            Console.WriteLine(" --------------- File List --------------------")
-            Console.WriteLine()
-
-
+                
+            p = Path.GetDirectoryName(input) & "//" & Path.GetFileNameWithoutExtension(input)
+            Directory.CreateDirectory(p & "//" & d)
             For Each f As FileData In subfiles
 
                 Console.WriteLine("File ID : {0} - File Offset : {1} - File Size : {2}", f.id, f.offset, f.size)
