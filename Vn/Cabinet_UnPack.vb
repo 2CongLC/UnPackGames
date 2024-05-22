@@ -91,14 +91,23 @@ Module Program
     End Class
 
     Class FileData
-        Public id As Int32
-        Public offset As Int32
-        Public size As Int32
+      Public cbFile As UInteger ' uncompressed size of this file in bytes
+      Public uoffFolderStart As UInteger ' uncompressed offset of this file in the folder
+      Public iFolder As UShort ' index into the CFFOLDER area
+      Public [date] As UShort ' date stamp for this file
+      Public time As UShort ' time stamp for this file
+      Public attribs As UShort ' attribute flags for this file
+      Public szName As Byte() ' name of this file
 
         Public Sub New()
-            id = br.ReadInt32
-            offset = br.ReadInt32
-            size = br.ReadInt32
+            cbFile = br.ReadUInt32
+            uoffFolderStart = br.ReadUInt32
+            iFolder = br.ReadUInt16
+            [date] = br.ReadUInt16
+            time = br.ReadUInt16
+            attribs = br.ReadUInt16
+            szName = 
+
         End Sub
     End Class
 
