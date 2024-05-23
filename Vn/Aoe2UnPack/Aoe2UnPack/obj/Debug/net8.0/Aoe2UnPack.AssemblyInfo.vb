@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Aoe2UnPack"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+711832e3b02cc57b09667ddf4058c63bb8cbbe08"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+019aa926c09d1e99fd44581db63b489d757746f7"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Aoe2UnPack"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Aoe2UnPack"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")> 
