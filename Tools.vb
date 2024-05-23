@@ -7,10 +7,10 @@ Public Class Tools
     Dim id As UInt64 = 0
     Dim index As Integer = 0
     For Each c As Char In fileName
-        If Char.IsUpper(c) Then
-            id = (id + (++index) * (AscW(c) + AscW("a") - AscW("A"))) Mod &H8000000B * &HFFFFFFEF
+        If ((AscW(c) >= AscW("A")) AndAlso (AscW(c) <= AscW("Z")) Then
+            id = (id + (index+1) * (AscW(c) + AscW("a") - AscW("A"))) Mod &H8000000B * &HFFFFFFEF
         Else
-            id = (id + (++index) * AscW(c)) Mod &H8000000B * &HFFFFFFEF
+            id = (id + (index+1) * AscW(c)) Mod &H8000000B * &HFFFFFFEF
         End If
     Next
     Return (id Xor &H12345678)
