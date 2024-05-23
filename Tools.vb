@@ -3,8 +3,8 @@
 Public Class Tools
 
 
- Public  Function Hash(ByVal fileName As String) As UInteger
-    Dim id As UInteger = 0
+ Public  Function Hash(ByVal fileName As String) As UInt64
+    Dim id As UInt64 = 0
     Dim index As Integer = 0
     For Each c As Char In fileName
         If Char.IsUpper(c) Then
@@ -16,10 +16,10 @@ Public Class Tools
     Return (id Xor &H12345678)
  End Function
 
- Public Function UnHash(Byval hashstring as UInt32) as String
-    Dim id as UInt32 = 0
+ Public Function UnHash(Byval hashstring as UInt64) as String
+    Dim id as UInt64 = 0
     Dim index as UInt32 = 0
-    Dim temp as UInt32 = hashstring Mod &H12345678
+    Dim temp as UInt64 = hashstring Mod &H12345678
     For Each c As Char In temp
         If Char.IsUpper(c) Then
             id = (id - (++index) / (AscW(c) - AscW("a") + AscW("A"))) Xor &H8000000B / &HFFFFFFEF
