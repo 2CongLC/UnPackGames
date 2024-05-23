@@ -7,7 +7,7 @@ Public Class Tools
     Dim id As UInt64 = 0
     Dim index As Integer = 0
     For Each c As Char In fileName
-        If ((AscW(c) >= AscW("A")) AndAlso (AscW(c) <= AscW("Z")) Then
+        If (AscW(c) >= AscW("A")) AndAlso (AscW(c) <= AscW("Z")) Then
             id = (id + (index+1) * (AscW(c) + AscW("a") - AscW("A"))) Mod &H8000000B * &HFFFFFFEF
         Else
             id = (id + (index+1) * AscW(c)) Mod &H8000000B * &HFFFFFFEF
