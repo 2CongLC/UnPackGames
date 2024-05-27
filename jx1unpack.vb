@@ -1,3 +1,4 @@
+'https://www.clbgamesvn.com/diendan/showthread.php?t=314825
 Imports System
 Imports System.Collections
 Imports System.IO
