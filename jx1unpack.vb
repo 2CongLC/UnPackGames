@@ -25,13 +25,28 @@ Module Program
             Dim count as Int32 = br.ReadInt32
             Dim subfiles as New List(of FileData)()
             For i as Int32 = 0 To count - 1
-              
-
+              subfiles.Add(New FileData)
             Next
-          End If
+            
+
+
+        
+        End If
             Console.ReadLine()
         End Sub
 
-     
+  Class FileData
+      Public id as Int32
+      Public offset as Int32
+      Public size as Int32
+      Public compressSize as Byte()
+      Public isCompress as Byte
+      Public Sub New()
+        id = br.ReadInt32
+        offset = br.ReadInt32
+        size = br.ReadInt32
+        compressSize = br.Readbytes(br.ReadInt32)
+        isCompress = br.ReadByte
+  End Class  
 
 End Module     
