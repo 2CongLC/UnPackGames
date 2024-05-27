@@ -46,7 +46,7 @@ Module Program
         id = br.ReadInt32
         offset = br.ReadInt32
         size = br.ReadInt32
-        compressSize = br.Readbytes(br.ReadInt32)
+        compressSize = br.Readbytes(3)
         isCompress = br.ReadByte
   End Class  
 
