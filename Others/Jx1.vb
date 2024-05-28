@@ -44,17 +44,19 @@ Module Program
         End Sub
 
   Class FileData
-      Public id as Int32
-      Public offset as Int32
-      Public size as Int32
-      Public compressSize as Byte()
-      Public isCompress as Byte
+      Public id as Int32 'Length = 4
+      Public offset as Int32 'Length = 4
+      Public size as Int32 'Length = 4
+      Public compressed as  Byte() 'Length = 3
+      Public isCompress as byte 'Length = 1
       Public Sub New()
         id = br.ReadInt32
         offset = br.ReadInt32
         size = br.ReadInt32
-        compressSize = br.Readbytes(3)
+        compressed = br.ReadBytes(3)
         isCompress = br.ReadByte
+        br.BaseStream.Position +=16
+      End sub
   End Class  
 
 End Module     
