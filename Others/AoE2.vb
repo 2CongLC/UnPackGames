@@ -41,12 +41,15 @@ Module Program
                 subfiles.Add(New FileData)
                Next
              Next
-
-            
-            
-
-
-        
+             p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
+             Directory.CreateDirectory(p)
+             For fd as FileData in subfiles
+                br.BaseStream.Position = fd.offset
+                Using bw As New BinaryWriter(File.Create(p & "//" & fd.name))
+                    bw.Write(br.ReadBytes(fd.size))
+                End Using
+              Next
+            Console.WriteLine("unpack done!!!")
         End If
             Console.ReadLine()
         End Sub
