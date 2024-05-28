@@ -35,10 +35,18 @@ Module Program
             For i as Int32 = 0 To count - 1
               subfiles.Add(New FileData)
             Next
-            
 
+            p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
+            Directory.CreateDirectory(p)
 
-        
+            For Each fd as FileData in subfiles
+             br.BaseStream.Position = fd.offset
+             
+             Using bw As New BinaryWriter(File.Create(p & "//" & fd.id))
+                 bw.Write(br.ReadBytes(fd.size))
+             End Using
+            Next
+            Console.WriteLine("unpack done!!!")
         End If
             Console.ReadLine()
         End Sub
