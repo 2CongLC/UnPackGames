@@ -32,6 +32,17 @@ Module Program
             For i as Int32 = 0 To count - 1
               subtables.Add(New TableData)
             Next
+            Dim subfiles as New List(of FileData)()
+            Dim name as String = Nothing
+            For td as TableData in subtables
+               name = td.name
+               br.BaseStream.Position = td.offset
+               For j as Int32 = 0 To td.count - 1
+                subfiles.Add(New FileData)
+               Next
+             Next
+
+            
             
 
 
@@ -46,22 +57,21 @@ Class TableData
     Public count as Int32
     Public Sub New()
         name = New String(br.ReadChars(4))
-        offset = br.ReadIn
-
+        offset = br.ReadInt32
+        count = br.ReadInt32
         End Sub
     End Class
-  Class FileData
-      Public id as Int32
+
+ Class FileData
+     Public id as Int32
       Public offset as Int32
       Public size as Int32
-      Public compressSize as Byte()
-      Public isCompress as Byte
+      
       Public Sub New()
         id = br.ReadInt32
         offset = br.ReadInt32
         size = br.ReadInt32
-        compressSize = br.Readbytes(3)
-        isCompress = br.ReadByte
+        End Sub
   End Class  
 
 End Module     
