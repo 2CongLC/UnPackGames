@@ -40,6 +40,16 @@ Module Program
             Console.ReadLine()
         End Sub
 
+Class TableData
+    Public name as String
+    Public offset as Int32
+    Public count as Int32
+    Public Sub New()
+        name = New String(br.ReadChars(4))
+        offset = br.ReadIn
+
+        End Sub
+    End Class
   Class FileData
       Public id as Int32
       Public offset as Int32
