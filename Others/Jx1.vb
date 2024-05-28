@@ -55,7 +55,6 @@ Module Program
         size = br.ReadInt32
         compressed = br.ReadBytes(3)
         isCompress = br.ReadByte
-        br.BaseStream.Position +=16
       End sub
   End Class  
 
