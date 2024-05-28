@@ -29,26 +29,23 @@ Module Program
             Dim nIndexTableOffset as Int32 = br.ReadInt32 ' Offset = 20, Length = 4
             Dim nFileCount as Int32 = br.ReadInt32 ' Offset = 24, Length = 4
             Dim nSizeOfIndexTable as Int32 = br.ReadInt32 ' Offset = 28, Length = 4
-            Dim nDataOffset as Int32
-            br.BaseStream.Position = 64
+            Dim nDataOffset as Int32 ' Offset = 32, Length = 4
+            Dim unknow3 as Int32 = br.ReadInt32 ' Offset = 36, Length = 4
+            Dim unknow4 as Int32 = br.ReadInt32 ' Offset = 40, Length = 4
+            br.BaseStream.Position = 44
             Dim subtables as New List(of TableData)()
-            For i as Int32 = 0 To count - 1
-              subtables.Add(New TableData)
+            Dim subfiles as New Lisr(of FileData)()
+            
+            For i as Int32 = 0 To FileCount - 1
+             subfiles.Add(New FileData)
             Next
-            Dim subfiles as New List(of FileData)()
-            Dim name as String = Nothing
-            For td as TableData in subtables
-               name = td.name
-               br.BaseStream.Position = td.offset
-               For j as Int32 = 0 To td.count - 1
-                subfiles.Add(New FileData)
-               Next
-             Next
-             p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
-             Directory.CreateDirectory(p)
+        
+            p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
+            Directory.CreateDirectory(p)
+             
              For fd as FileData in subfiles
                 br.BaseStream.Position = fd.offset
-                Using bw As New BinaryWriter(File.Create(p & "//" & fd.name))
+                Using bw As New BinaryWriter(File.Create(p & "//" & fd.id))
                     bw.Write(br.ReadBytes(fd.size))
                 End Using
               Next
@@ -58,25 +55,25 @@ Module Program
         End Sub
 
 Class TableData
-    Public name as String
-    Public offset as Int32
-    Public count as Int32
+    Public hashA as String
+    Public hashB as String
+    Public isExit as String
     Public Sub New()
-        name = New String(br.ReadChars(4))
-        offset = br.ReadInt32
-        count = br.ReadInt32
+        hashA = New String(br.ReadChars(4))
+        hashB = New String(br.ReadChars(4))
+        isExit = New String(br.ReadChars(4))
         End Sub
     End Class
 
  Class FileData
-     Public id as Int32
-      Public offset as Int32
+     Public offset as Int32
       Public size as Int32
+      Public id as Int32
       
       Public Sub New()
-        id = br.ReadInt32
         offset = br.ReadInt32
         size = br.ReadInt32
+        id = br.ReadInt32
         End Sub
   End Class  
 
