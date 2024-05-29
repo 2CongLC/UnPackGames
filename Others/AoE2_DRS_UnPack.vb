@@ -80,7 +80,6 @@ Class TableData
   End Class
 
 Private ReadOnly DataFormats As New Dictionary(Of String, Func(Of String, Boolean))() From {
-        {".bina", AddressOf IsBina},
         {".slp", AddressOf IsSlp},
         {".wav", AddressOf IsWav}
     }
@@ -90,6 +89,11 @@ Public Function IsWav(ByVal data As Byte()) As Boolean
             AndAlso (data(8) = &H57 AndAlso data(9) = &H41 AndAlso data(10) = &H56 AndAlso data(11) = &H45)
     End Function
 
+Public Function IsSlp(ByVal data As Byte()) As Boolean
+        Dim header as Byte() = data.Take(4).ToArray()
+        Dim s as String = Encoding.ASCII.GetString(header)
+        Return (s = "2.0N") OrElse (s = "3.0") OrElse (s = "4.0X") OrElse (s = "4.1X") OrElse (s = "4.2P") 
+    End Function
 
 Public Function GetExtension(ByVal data As Byte()) As String
        
@@ -101,7 +105,7 @@ Public Function GetExtension(ByVal data As Byte()) As String
         Catch
         End Try
         Next
-        Return DEFAULT_EXTENSION_BINARY
+        Return ".bina"
  End Function
 
 End Module     
