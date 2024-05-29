@@ -45,8 +45,10 @@ Module Program
              Directory.CreateDirectory(p)
              For fd as FileData in subfiles
                 br.BaseStream.Position = fd.offset
-                Using bw As New BinaryWriter(File.Create(p & "//" & fd.name))
-                    bw.Write(br.ReadBytes(fd.size))
+                Dim buffer as Byte() = br.ReadBytes(fd.size)
+                Dim ext as String = GetExtension(buffer)
+                Using bw As New BinaryWriter(File.Create(p & "//" & fd.name & ext))
+                    bw.Write(buffer)
                 End Using
               Next
             Console.WriteLine("unpack done!!!")
@@ -78,14 +80,28 @@ Class TableData
   End Class
 
 Private ReadOnly DataFormats As New Dictionary(Of String, Func(Of String, Boolean))() From {
-        {"bina", AddressOf IsBina},
-        {"slp", AddressOf IsSlp},
-        {"wav", AddressOf IsWav}
+        {".bina", AddressOf IsBina},
+        {".slp", AddressOf IsSlp},
+        {".wav", AddressOf IsWav}
     }
 
 Public Function IsWav(ByVal data As Byte()) As Boolean
         Return (data(0) = &H52 AndAlso data(1) = &H49 AndAlso data(2) = &H46 AndAlso data(3) = &H46) _
             AndAlso (data(8) = &H57 AndAlso data(9) = &H41 AndAlso data(10) = &H56 AndAlso data(11) = &H45)
     End Function
+
+
+Public Function GetExtension(ByVal data As Byte()) As String
+       
+     For Each binFmt In DataFormats
+        Try
+           If binFmt.Value(data) Then
+              Return binFmt.Key
+            End If
+        Catch
+        End Try
+        Next
+        Return DEFAULT_EXTENSION_BINARY
+ End Function
 
 End Module     
