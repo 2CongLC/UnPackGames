@@ -75,6 +75,17 @@ Class TableData
         offset = br.ReadInt32
         size = br.ReadInt32
         End Sub
-  End Class  
+  End Class
+
+Private ReadOnly DataFormats As New Dictionary(Of String, Func(Of String, Boolean))() From {
+        {"bina", AddressOf IsBina},
+        {"slp", AddressOf IsSlp},
+        {"wav", AddressOf IsWav}
+    }
+
+Public Function IsWav(ByVal data As Byte()) As Boolean
+        Return (data(0) = &H52 AndAlso data(1) = &H49 AndAlso data(2) = &H46 AndAlso data(3) = &H46) _
+            AndAlso (data(8) = &H57 AndAlso data(9) = &H41 AndAlso data(10) = &H56 AndAlso data(11) = &H45)
+    End Function
 
 End Module     
