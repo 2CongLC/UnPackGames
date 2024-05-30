@@ -23,11 +23,11 @@ Module Program
 
             br = New BinaryReader(File.OpenRead(input))
             Dim signature as String = New String(br.ReadChars(4)) ' Offset = 0, Length = 4
-            Dim count as Int32 = br.ReadInt32 ' Offset = 4, Length = 4
-            Dim index as Int32 = br.ReadInt32 ' Offset = 8, Length = 4
-            Dim data as Int32 = br.ReadInt32 ' Offset = 12, Length = 4
-            Dim crc32 as Int32 = br.ReadInt32 ' Offset = 16, Length = 4
-            Dim reserved as String = New String(br.ReadChars(12)) 'Offset = 20, Length = 12
+            Dim count as UInt32 = br.ReadUInt32 ' Offset = 4, Length = 4
+            Dim index as UInt32 = br.ReadUInt32 ' Offset = 8, Length = 4
+            Dim data as UInt32 = br.ReadUInt32 ' Offset = 12, Length = 4
+            Dim crc32 as UInt32 = br.ReadUInt32 ' Offset = 16, Length = 4
+            Dim reserved as Byte() = br.ReadBytes(12) 'Offset = 20, Length = 12
 
             br.BaseStream.Position = 32
 
@@ -40,6 +40,7 @@ Module Program
             Directory.CreateDirectory(p)
 
             For Each fd as FileData in subfiles
+        
              br.BaseStream.Position = fd.offset
              
              Using bw As New BinaryWriter(File.Create(p & "//" & fd.id))
@@ -52,15 +53,15 @@ Module Program
         End Sub
 
   Class FileData
-      Public id as Int32 'Length = 4
-      Public offset as Int32 'Length = 4
-      Public size as Int32 'Length = 4
+      Public id as UInt32 'Length = 4
+      Public offset as UInt32 'Length = 4
+      Public size as UInt32 'Length = 4
       Public compressed as  Byte() 'Length = 3
       Public isCompress as byte 'Length = 1
       Public Sub New()
-        id = br.ReadInt32
-        offset = br.ReadInt32
-        size = br.ReadInt32
+        id = br.ReadUInt32
+        offset = br.ReadUInt32
+        size = br.ReadUInt32
         compressed = br.ReadBytes(3)
         isCompress = br.ReadByte
       End sub
