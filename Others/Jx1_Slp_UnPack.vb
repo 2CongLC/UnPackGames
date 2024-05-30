@@ -23,20 +23,20 @@ Module Program
 
             br = New BinaryReader(File.OpenRead(input))
             Dim signature as String = New String(br.ReadChars(4)) ' Offset = 0, Length = 4
-            Dim width as Int32 = br.ReadInt32 ' Offset = 4, Length = 4
-            Dim height as Int32 = br.ReadInt32 ' Offset = 8, Length = 4
-            Dim centerX as Int32 = br.ReadInt32 ' Offset = 12, Length = 4
-            Dim centerY as Int32 = br.ReadInt32 ' Offset = 16, Length = 4
-            Dim nFrames as Int32 = br.ReadInt32 ' Offset = 20, Length = 4
-            Dim colors as Int32 = br.ReadInt32 ' Offset = 24, Length = 4
-            Dim directions as Int32 = br.ReadInt32 ' Offset = 28, Length = 4
-            Dim interval as Int32 = br.ReadInt32 ' Offset = 32, Length = 4
-            Dim reserved as Byte() = br.ReadBytes(6) ' Offset = 36, Length = 6
+            Dim width as UInt16 = br.ReadInt16 ' Offset = 4, Length = 2
+            Dim height as UInt16 = br.ReadInt16 ' Offset = 6, Length = 2
+            Dim centerX as UInt16 = br.ReadInt16 ' Offset = 8, Length = 2
+            Dim centerY as UInt16 = br.ReadInt16 ' Offset = 10, Length = 2
+            Dim nFrames as UInt16 = br.ReadInt16 ' Offset = 12, Length = 2
+            Dim colors as UInt16 = br.ReadInt16 ' Offset = 14, Length = 2
+            Dim directions as UInt16 = br.ReadInt16 ' Offset = 16, Length = 2
+            Dim interval as UInt16 = br.ReadInt16 ' Offset = 18, Length = 2
+            Dim reserved as Byte() = br.ReadBytes(6) ' Offset = 20, Length = 6
 
-            br.BaseStream.Position = 42
+            br.BaseStream.Position = 26
 
             Dim subfiles as New List(of FileData)()
-            For i as Int32 = 0 To count - 1
+            For i as UInt16 = 0 To nFrames - 1
               subfiles.Add(New FileData)
             Next
 
