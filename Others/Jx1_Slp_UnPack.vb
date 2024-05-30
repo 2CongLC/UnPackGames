@@ -23,14 +23,14 @@ Module Program
 
             br = New BinaryReader(File.OpenRead(input))
             Dim signature as String = New String(br.ReadChars(4)) ' Offset = 0, Length = 4
-            Dim width as UInt16 = br.ReadInt16 ' Offset = 4, Length = 2
-            Dim height as UInt16 = br.ReadInt16 ' Offset = 6, Length = 2
-            Dim centerX as UInt16 = br.ReadInt16 ' Offset = 8, Length = 2
-            Dim centerY as UInt16 = br.ReadInt16 ' Offset = 10, Length = 2
-            Dim nFrames as UInt16 = br.ReadInt16 ' Offset = 12, Length = 2
-            Dim colors as UInt16 = br.ReadInt16 ' Offset = 14, Length = 2
-            Dim directions as UInt16 = br.ReadInt16 ' Offset = 16, Length = 2
-            Dim interval as UInt16 = br.ReadInt16 ' Offset = 18, Length = 2
+            Dim width as UInt16 = br.ReadUInt16 ' Offset = 4, Length = 2
+            Dim height as UInt16 = br.ReadUInt16 ' Offset = 6, Length = 2
+            Dim centerX as UInt16 = br.ReadUInt16 ' Offset = 8, Length = 2
+            Dim centerY as UInt16 = br.ReadUInt16 ' Offset = 10, Length = 2
+            Dim nFrames as UInt16 = br.ReadUInt16 ' Offset = 12, Length = 2
+            Dim colors as UInt16 = br.ReadUInt16 ' Offset = 14, Length = 2
+            Dim directions as UInt16 = br.ReadUInt16 ' Offset = 16, Length = 2
+            Dim interval as UInt16 = br.ReadUInt16 ' Offset = 18, Length = 2
             Dim reserved as Byte() = br.ReadBytes(6) ' Offset = 20, Length = 6
 
             br.BaseStream.Position = 26
