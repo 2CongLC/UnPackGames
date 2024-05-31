@@ -23,16 +23,20 @@ Module Program
 
             br = New BinaryReader(File.OpenRead(input))
             Dim signature as String = New String(br.ReadChars(4)) ' Offset = 0, Length = 4
-            Dim count as UInt32 = br.ReadUInt32 ' Offset = 4, Length = 4
-            Dim index as UInt32 = br.ReadUInt32 ' Offset = 8, Length = 4
-            Dim data as UInt32 = br.ReadUInt32 ' Offset = 12, Length = 4
-            Dim crc32 as UInt32 = br.ReadUInt32 ' Offset = 16, Length = 4
-            Dim reserved as Byte() = br.ReadBytes(12) 'Offset = 20, Length = 12
+            Dim width as UInt16 = br.ReadUInt16 ' Offset = 4, Length = 2
+            Dim height as UInt16 = br.ReadUInt16 ' Offset = 6, Length = 2
+            Dim centerX as UInt16 = br.ReadUInt16 ' Offset = 8, Length = 2
+            Dim centerY as UInt16 = br.ReadUInt16 ' Offset = 10, Length = 2
+            Dim nFrames as UInt16 = br.ReadUInt16 ' Offset = 12, Length = 2
+            Dim colors as UInt16 = br.ReadUInt16 ' Offset = 14, Length = 2
+            Dim directions as UInt16 = br.ReadUInt16 ' Offset = 16, Length = 2
+            Dim interval as UInt16 = br.ReadUInt16 ' Offset = 18, Length = 2
+            Dim reserved as Byte() = br.ReadBytes(6) ' Offset = 20, Length = 6
 
-            br.BaseStream.Position = 32
+            br.BaseStream.Position = 26
 
             Dim subfiles as New List(of FileData)()
-            For i as Int32 = 0 To count - 1
+            For i as UInt16 = 0 To nFrames - 1
               subfiles.Add(New FileData)
             Next
 
@@ -40,7 +44,6 @@ Module Program
             Directory.CreateDirectory(p)
 
             For Each fd as FileData in subfiles
-        
              br.BaseStream.Position = fd.offset
              
              Using bw As New BinaryWriter(File.Create(p & "//" & fd.id))
@@ -53,15 +56,15 @@ Module Program
         End Sub
 
   Class FileData
-      Public id as UInt32 'Length = 4
-      Public offset as UInt32 'Length = 4
-      Public size as UInt32 'Length = 4
+      Public id as Int32 'Length = 4
+      Public offset as Int32 'Length = 4
+      Public size as Int32 'Length = 4
       Public compressed as  Byte() 'Length = 3
       Public isCompress as byte 'Length = 1
       Public Sub New()
-        id = br.ReadUInt32
-        offset = br.ReadUInt32
-        size = br.ReadUInt32
+        id = br.ReadInt32
+        offset = br.ReadInt32
+        size = br.ReadInt32
         compressed = br.ReadBytes(3)
         isCompress = br.ReadByte
       End sub
