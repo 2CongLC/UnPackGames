@@ -57,7 +57,18 @@ Module Program
                             .Blue = blue << 8 }   
                End While
             Next
-            
+
+            p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
+            Directory.CreateDirectory(p)
+
+            For Each fd as SprOffs in subSprOffs
+        
+             br.BaseStream.Position = fd.offset
+             
+             Using bw As New BinaryWriter(File.Create(p & "//" & fd.offset))
+                 bw.Write(br.ReadBytes(fd.size))
+             End Using
+            Next 
         End If
             Console.ReadLine()
         End Sub
