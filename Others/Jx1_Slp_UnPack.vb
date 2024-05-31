@@ -44,6 +44,19 @@ Module Program
             subSprOffs.Add(New SprOffs) ' Length = 8
 
             br.BaseStream.Position += nFrames * 8
+
+            Dim subKPal16 as New List(Of KPal16)()
+            For Each k24 as KPal24 in subKPal24
+              While colors > 0
+                Dim red = k24.Red >> 4
+                Dim green = k24.Green >> 4
+                Dim blue = k24.Blue >> 4
+                subKPal16.Add(New KPal16() With {
+                            .Red = Red << 8,
+                            .Green = green << 8,
+                            .Blue = blue << 8 }   
+               End While
+            Next
             
         End If
             Console.ReadLine()
@@ -61,9 +74,9 @@ Module Program
   End Class 
 
   Class KPal16
-        Dim Red as Byte
-        Dim Green as Byte
-        Dim Blue as Byte
+        Dim Red as Byte ' Length = 1
+        Dim Green as Byte ' Length  = 1
+        Dim Blue as Byte ' Length = 1
    End Class
             
   Class SprOffs
