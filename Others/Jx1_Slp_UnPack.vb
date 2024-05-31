@@ -60,6 +60,12 @@ Module Program
         End Sub         
   End Class 
 
+  Class KPal16
+        Dim Red as Byte
+        Dim Green as Byte
+        Dim Blue as Byte
+   End Class
+            
   Class SprOffs
         Dim offset as UInt32 ' Length = 4
         Dim size as UInt32 ' Length = 4
