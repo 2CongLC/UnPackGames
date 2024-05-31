@@ -33,7 +33,7 @@ End Function
 Public Function PreDEC(ByRef x As Integer) As Integer
     Return System.Threading.Interlocked.Decrement(x)
 End Function
-i--
+'i--
 <Runtime.CompilerServices.Extension>
 Public Function PostDEC(ByRef x As Integer) As Integer
     Dim tmp = x
