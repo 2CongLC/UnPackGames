@@ -33,41 +33,44 @@ Module Program
             Dim interval as UInt16 = br.ReadUInt16 ' Offset = 18, Length = 2
             Dim reserved as Byte() = br.ReadBytes(6) ' Offset = 20, Length = 6
 
-            br.BaseStream.Position = 26
+            br.BaseStream.Position += 26
 
-            Dim subfiles as New List(of FileData)()
-            For i as UInt16 = 0 To nFrames - 1
-              subfiles.Add(New FileData)
-            Next
+            Dim subKPal24 as New List(of KPal24)()
+            subKPal24.Add(New KPal24) ' Length = 3
 
-            p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
-            Directory.CreateDirectory(p)
+            br.BaseStream.Position = colors * 3
 
-            For Each fd as FileData in subfiles
-             br.BaseStream.Position = fd.offset
-             
-             Using bw As New BinaryWriter(File.Create(p & "//" & fd.id))
-                 bw.Write(br.ReadBytes(fd.size))
-             End Using
-            Next
-            Console.WriteLine("unpack done!!!")
+            Dim subSprOffs as New List(Of SprOffs)()
+            subSprOffs.Add(New SprOffs) ' Length = 4
+
+            br.BaseStream.Position += nFrames * 4
+            
         End If
             Console.ReadLine()
         End Sub
 
-  Class FileData
-      Public id as Int32 'Length = 4
-      Public offset as Int32 'Length = 4
-      Public size as Int32 'Length = 4
-      Public compressed as  Byte() 'Length = 3
-      Public isCompress as byte 'Length = 1
-      Public Sub New()
-        id = br.ReadInt32
-        offset = br.ReadInt32
-        size = br.ReadInt32
-        compressed = br.ReadBytes(3)
-        isCompress = br.ReadByte
-      End sub
-  End Class  
+  Class KPal24
+        Dim Red as Byte ' Length = 1
+        Dim Green as Byte ' Length = 1
+        Dim Blue as Byte ' Length = 1
+        Public Sub New()
+            Red = br.ReadByte
+            Green = br.ReadByte
+            Blue = br.ReadByte
+        End Sub         
+  End Class 
+
+  Class SprOffs
+        Dim offset as UInt16 ' Length = 2
+        Dim size as UInt16 ' Length = 2
+        Public Sub New()
+            offset = br.ReadUInt16
+            size = br.ReadUInt16
+        End Sub
+   End Class
+
+   
+
+    
 
 End Module     
