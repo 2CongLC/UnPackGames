@@ -41,9 +41,9 @@ Module Program
             br.BaseStream.Position = colors * 3
 
             Dim subSprOffs as New List(Of SprOffs)()
-            subSprOffs.Add(New SprOffs) ' Length = 4
+            subSprOffs.Add(New SprOffs) ' Length = 8
 
-            br.BaseStream.Position += nFrames * 4
+            br.BaseStream.Position += nFrames * 8
             
         End If
             Console.ReadLine()
@@ -61,16 +61,29 @@ Module Program
   End Class 
 
   Class SprOffs
-        Dim offset as UInt16 ' Length = 2
-        Dim size as UInt16 ' Length = 2
+        Dim offset as UInt32 ' Length = 4
+        Dim size as UInt32 ' Length = 4
         Public Sub New()
-            offset = br.ReadUInt16
-            size = br.ReadUInt16
+            offset = br.ReadUInt32
+            size = br.ReadUInt32
         End Sub
    End Class
 
-   
-
-    
-
+   Class SprFrame
+        Dim width as UInt16
+        Dim heigth as UInt16
+        Dim offsetX as UInt16
+        Dim offsetY as UInt16
+        Dim sprite as Byte
+        Public Sub New()
+            width = br.ReadUInt16
+            heigth = br.ReadUInt16
+            offsetX = br.ReadUInt16
+            offsetY = br.ReadUInt16
+            sprite = br.ReadByte
+        End Sub
+      End Class
+                
+        
+       
 End Module     
