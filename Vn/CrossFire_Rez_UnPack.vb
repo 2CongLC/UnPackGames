@@ -61,6 +61,9 @@ Module Program
                 subfilea.Add(New FileData)
                 br.BaseStream.Position += 28
             End If 
+
+            For Each td as TableData in subtables
+                
            
         End If
     End Sub
