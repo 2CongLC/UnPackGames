@@ -1,3 +1,4 @@
+' https://gist.github.com/kungfulon/dfa49323eb7a55db964f10174e57c19f
 Imports System
 Imports System.Collections
 Imports System.IO
@@ -63,16 +64,18 @@ Module Program
             End If 
 
             p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
-            'Directory.CreateDirectory(p)
+            
             Dim n as String = Nothing
             Dim extension as String = Nothing
 
             For Each td as TableData in subtables
                 n = td.name
             Next
-
+            Directory.CreateDirectory(p)
             For Each fd as FileData in subfiles
                 Dim ext As String = New String(BitConverter.GetBytes(fd.ext).Reverse().Select(Function(c) CChar(c)).ToArray())
+                Dim buffer as Byte() = br.ReadBytes(fd.size)
+                
                 
             Next
 
@@ -89,7 +92,7 @@ Module Program
             pos = br.ReadUInt32
             size = br.ReadUInt32
             time = br.ReadUInt32
-            namelen = New String(br.ReadChars(4))
+            namelen = New String(BitConverter.GetBytes(br.ReadUInt32))
         End Sub
     End Class
     
@@ -108,7 +111,7 @@ Module Program
             id = br.ReadUInt32
             ex = br.ReadUInt32
             numkeys = br.ReadUInt32
-            namelen = New String(br.ReadChars(4))
+            namelen = New String(BitConverter.GetBytes(br.ReadUInt32))
         End Sub    
     End Class
 
