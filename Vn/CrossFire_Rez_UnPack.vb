@@ -57,12 +57,12 @@ Module Program
         Dim pos as UInt32
         Dim size as UInt32
         Dim time as UInt32
-        Dim name as UInt32
+        Dim namelen as UInt32
         Public Sub New()
             pos = br.ReadUInt32
             size = br.ReadUInt32
             time = br.ReasUInt32
-            name = br.ReadUInt32
+            namelen = br.ReadUInt32
         End Sub
     End Class
     
@@ -73,7 +73,7 @@ Module Program
         Dim id as UInt32
         Dim ex as UInt32
         Dim numkeys as UInt32
-        Dim numlength as UInt32
+        Dim namelen as UInt32
         Public Sub New()
             pos = br.ReadUInt32
             size = br.ReadUInt32
@@ -81,7 +81,7 @@ Module Program
             id = br.ReadUInt32
             ex = br.ReadUInt32
             numkeys = br.ReadUInt32
-            numlength = br.ReadUInt32
+            namelen = br.ReadUInt32
         End Sub    
     End Class
 
