@@ -46,12 +46,12 @@ Module Program
             Dim buffer as Byte() = New Byte(RootDirSize){}
             br.Read(buffer, 0, RootDirSize)
             Decrypt(buffer, RootDirSize, RootDirPos)
-            Dim startpos as UInt32 = buffer.Length
-            Dim endpos as UInt32 = startpos + RootDirSize
+            Dim cur as Int32 = 0
+            Dim rootdz as UInt32 = RootDirSize
             Dim subtables as New List(Of TableData)()
             Dim subfiles as New List(Of FileData)()
-            While startpos < endpos
-                Dim types as UInt32 = startpos
+            While cur < rootdz
+                Dim types as Int32 = BitConvert.ToInt32(buffer,cur)
                 startpos += 4
                 If types = 1 Then
                     subtables.Add(New TableData)
