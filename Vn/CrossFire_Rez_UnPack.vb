@@ -54,8 +54,7 @@ Module Program
                 Dim types as UInt32 = startpos
                 startpos += 4
                 If types = 1 Then
-                    subtables
-                    Add(New TableData)
+                    subtables.Add(New TableData)
                     startpos += 16
                  Elsle
                     Dim 
