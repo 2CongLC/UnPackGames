@@ -116,9 +116,9 @@ Module Program
         End Sub    
     End Class
 
-    Public Sub Decrypt(ByVal buffer As Char(), ByVal size As Integer, ByVal keyPos As Integer)
+    Sub Decrypt(ByRef buffer() As Byte, ByVal size As Integer, ByVal keyPos As Integer)
         For i As Integer = 0 To size - 1
-            buffer(i) = CChar(Convert.ToInt32(49) + (KEY(keyPos Mod KEY.Length) Xor (Not buffer(i))))
+            buffer(i) = &H49 + (KEY(keyPos Mod KEY.Length) Xor Not buffer(i))
             keyPos += 1
         Next
     End Sub
