@@ -112,9 +112,9 @@ Module Program
         End Sub    
     End Class
 
-    Public Sub Decrypt(ByVal buf As Char(), ByVal size As Integer, ByVal keyPos As Integer)
+    Public Sub Decrypt(ByVal buffer As Char(), ByVal size As Integer, ByVal keyPos As Integer)
         For i As Integer = 0 To size - 1
-            buf(i) = CChar(Convert.ToInt32(49) + (KEY(keyPos Mod KEY.Length) Xor (Not buf(i))))
+            buffer(i) = CChar(Convert.ToInt32(49) + (KEY(keyPos Mod KEY.Length) Xor (Not buffer(i))))
             keyPos += 1
         Next
     End Sub
@@ -211,7 +211,19 @@ Module Program
     &HBA, &H41, &HD5, &H51, &H0F, &HAE, &HFB, &H7C, &H0F, &H30, 
     &HE4, &H9A, &HBE, &H50, &H36, &HF9, &H7A, &H17, &H62, &H8E, 
     &H7B, &H94, &H23, &H8C, &H15, &H0C, &HD5, &H48, &H02, &H2B, 
-    &HFB, &HB6, &HEB, &H5B, &H22, &
+    &HFB, &HB6, &HEB, &H5B, &H22, &HBE, &H75, &H9E, &H6A, &H99, 
+    &H1A, &H0D, &HF6, &H90, &HFC, &H57, &H79, &H43, &H01, &H6F, 
+    &H2F, &HCD, &H74, &HAB, &H74, &HF5, &H65, &H9D, &H43, &HBB, 
+    &H13, &HDE, &HD5, &H6D, &H97, &H08, &HA9, &H9E, &H11, &H2E, 
+    &H2A, &H29, &HA0, &HFD, &H3F, &H84, &H52, &HDB, &HFB, &HB4, 
+    &H67, &H30, &HB3, &H08, &H0B, &H2D, &HB7, &HEE, &HDA, &H41, 
+    &HED, &H1C, &H6A, &H7F, &H98, &H4F, &H14, &H45, &H75, &HD4, 
+    &H42, &H44, &H8C, &H34, &H86, &H4F, &HD9, &H28, &HAF, &H10, 
+    &H1E, &H25, &H22, &HF7, &H1A, &HC0, &HBE, &HA0, &H5D, &H1E, 
+    &H7C, &HE3, &H0F, &HBE, &H17, &HE4, &HC5, &HD5, &HF9, &H4D, 
+    &HD0, &H7F, &HA7
+}
+
 
 
 
