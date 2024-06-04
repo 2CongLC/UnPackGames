@@ -32,15 +32,15 @@ Module Program
             Dim EOF1 As Char = br.ReadChar ' Offset = 132, Length = 2
             Dim FileFormatVersion As UInt32 = br.ReadUInt32 ' Offet = 134, Length = 4
             Dim RootDirPos As UInt32 = br.ReadUInt32 ' Offset = 138, Length = 4
-            Dim RootDirSize As UInteger
-            Dim RootDirTime As UInteger
-            Dim NextWritePos As UInteger
-            Dim Time As UInteger
-            Dim LargestKeyAry As UInteger
-            Dim LargestDirNameSize As UInteger
-            Dim LargestRezNameSize As UInteger
-            Dim LargestCommentSize As UInteger
-            Dim IsSorted As Byte
+            Dim RootDirSize As UInt32 = br.ReadUInt32 ' Offset = 142, Length = 4
+            Dim RootDirTime As UInt32 = br.ReadUInt32 ' Offset = 146, Length = 4
+            Dim NextWritePos As UInt32 = br.ReadUInt32 ' Offset = 150, Length = 4
+            Dim Time As UInt32 = br.ReadUInt32 ' Offset = 154, Length = 4
+            Dim LargestKeyAry As UInt32 = br.ReadUInt32 ' Offset = 158, Length = 4
+            Dim LargestDirNameSize As UInt32 = br.ReadUInt32 ' Offset = 162, Length = 4
+            Dim LargestRezNameSize As UInt32 = br.ReadUInt32 ' Offset = 166, Length = 4
+            Dim LargestCommentSize As UInt32 = br.ReadUInt32 ' Offset = 170, Length = 4
+            Dim IsSorted As Byte = br.ReadByte ' Offset = 174, Length = 1
 
 
 
