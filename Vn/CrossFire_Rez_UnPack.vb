@@ -51,7 +51,7 @@ Module Program
             Dim subtables as New List(Of TableData)()
             Dim subfiles as New List(Of FileData)()
             While cur < rootdz
-                Dim types as Int32 = BitConvert.ToInt32(buffer,cur)
+                Dim types as Int32 = BitConverter.ToInt32(buffer,cur)
                 startpos += 4
                 If types = 1 Then
                     subtables.Add(New TableData)
