@@ -75,11 +75,12 @@ Module Program
             For Each fd as FileData in subfiles
                 Dim ext As String = New String(BitConverter.GetBytes(fd.ext).Reverse().Select(Function(c) CChar(c)).ToArray())
                 Dim buffer as Byte() = br.ReadBytes(fd.size)
-                
-                
+                br.BaseStream.Position = fd.pos
+                Using bw As New BinaryWriter(File.Create(p & "//" & fd.id))
+                  bw.Write(br.ReadBytes(fd.size))
+                End Using                   
             Next
-
-           
+            Console.WriteLine("unpack done ")    
         End If
     End Sub
 
