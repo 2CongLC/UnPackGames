@@ -112,6 +112,13 @@ Module Program
         End Sub    
     End Class
 
+    Public Sub Decrypt(ByVal buf As Char(), ByVal size As Integer, ByVal keyPos As Integer)
+        For i As Integer = 0 To size - 1
+            buf(i) = CChar(Convert.ToInt32(49) + (KEY(keyPos Mod KEY.Length) Xor (Not buf(i))))
+            keyPos += 1
+        Next
+    End Sub
+
     
 
 End Module      
