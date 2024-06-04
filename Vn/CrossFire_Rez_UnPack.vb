@@ -62,16 +62,15 @@ Module Program
                 subfilea.Add(New FileData)
                 br.BaseStream.Position += 28
             End If 
-
-            p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
-            
+     
             Dim n as String = Nothing
-            Dim extension as String = Nothing
-
+        
             For Each td as TableData in subtables
                 n = td.name
             Next
+            p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
             Directory.CreateDirectory(p)
+        
             For Each fd as FileData in subfiles
                 Dim ext As String = New String(BitConverter.GetBytes(fd.ext).Reverse().Select(Function(c) CChar(c)).ToArray())
                 Dim buffer as Byte() = br.ReadBytes(fd.size)
