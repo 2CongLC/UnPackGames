@@ -52,16 +52,14 @@ Module Program
             Dim subfiles as New List(Of FileData)()
             While cur < rootdz
                 Dim types as Int32 = BitConverter.ToInt32(buffer,cur)
-                startpos += 4
+                cur += 4
                 If types = 1 Then
                     subtables.Add(New TableData)
-                    startpos += 16
+                    cur += 16
                  Elsle
-                    Dim 
-
-
+                    subfiles.Add(New FileData)
+                    cur += 28
                 End If    
-
             End While
 
         End If
@@ -75,19 +73,19 @@ Module Program
         Public Sub New()
             pos = br.ReadUInt32
             size = br.ReadUInt32
-            time = br.ReasUInt32
+            time = br.ReadUInt32
             namelen = br.ReadUInt32
         End Sub
     End Class
     
     Class FileData
-        Dim pos as UInt32
-        Dim size as UInt32
-        Dim time as UInt32
-        Dim id as UInt32
-        Dim ex as UInt32
-        Dim numkeys as UInt32
-        Dim namelen as UInt32
+        Dim pos as UInt32 ' Length = 4
+        Dim size as UInt32 ' Length = 4
+        Dim time as UInt32 ' Length = 4
+        Dim id as UInt32 ' Length = 4
+        Dim ex as UInt32 ' Length = 4
+        Dim numkeys as UInt32 ' Length = 4
+        Dim namelen as UInt32 ' Length = 4
         Public Sub New()
             pos = br.ReadUInt32
             size = br.ReadUInt32
