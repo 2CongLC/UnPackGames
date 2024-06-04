@@ -21,17 +21,17 @@ Module Program
         If IO.File.Exists(input) Then
 
             br = New BinaryReader(File.OpenRead(input))
-            Dim CR1 As Char
-            Dim LF1 As Char
-            Dim FileType As String
-            Dim CR2 As Char
-            Dim LF2 As Char
-            Dim UserTitle As String
-            Dim CR3 As Char
-            Dim LF3 As Char
-            Dim EOF1 As Char
-            Dim FileFormatVersion As UInteger
-            Dim RootDirPos As UInteger
+            Dim CR1 As Char = br.ReadChar ' Offset = 0, Length = 2
+            Dim LF1 As Char = br.ReadChar ' Offset = 2, Length = 2
+            Dim FileType As String = New String(br.ReadChars(60)) ' Offset = 4, Length = 60
+            Dim CR2 As Char = br.ReadChar ' Offset = 64, Length = 2
+            Dim LF2 As Char = br.ReadChar ' Offset = 66, Length = 2
+            Dim UserTitle As String = New String(br.ReadChars(60)) ' Offset = 68, Length = 60
+            Dim CR3 As Char = br.ReadChar ' Offset = 128, Length = 2
+            Dim LF3 As Char = br.ReadChar ' Offset = 130, Length = 2
+            Dim EOF1 As Char = br.ReadChar ' Offset = 132, Length = 2
+            Dim FileFormatVersion As UInt32 = br.ReadUInt32 ' Offet = 134, Length = 4
+            Dim RootDirPos As UInt32 = br.ReadUInt32 ' Offset = 138, Length = 4
             Dim RootDirSize As UInteger
             Dim RootDirTime As UInteger
             Dim NextWritePos As UInteger
