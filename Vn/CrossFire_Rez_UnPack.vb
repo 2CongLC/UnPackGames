@@ -62,8 +62,15 @@ Module Program
                 br.BaseStream.Position += 28
             End If 
 
+            p = Path.GetDirectoryName(input) & "\" & Path.GetFileNameWithoutExtension(input)
+            'Directory.CreateDirectory(p)
+            Dim n as String = Nothing
+            Dim extension as String = Nothing
+
             For Each td as TableData in subtables
-                
+                n = td.name
+                extension  = td.ext
+
            
         End If
     End Sub
@@ -72,12 +79,12 @@ Module Program
         Dim pos as UInt32 ' Length = 4
         Dim size as UInt32 ' Length = 4
         Dim time as UInt32 ' Length = 4
-        Dim namelen as UInt32 ' Length = 4
+        Dim namelen as String ' Length = 4
         Public Sub New()
             pos = br.ReadUInt32
             size = br.ReadUInt32
             time = br.ReadUInt32
-            namelen = br.ReadUInt32
+            namelen = New String(br.ReadChars(4))
         End Sub
     End Class
     
@@ -86,17 +93,17 @@ Module Program
         Dim size as UInt32 ' Length = 4
         Dim time as UInt32 ' Length = 4
         Dim id as UInt32 ' Length = 4
-        Dim ex as UInt32 ' Length = 4
+        Dim ext as String ' Length = 4
         Dim numkeys as UInt32 ' Length = 4
-        Dim namelen as UInt32 ' Length = 4
+        Dim namelen as String ' Length = 4
         Public Sub New()
             pos = br.ReadUInt32
             size = br.ReadUInt32
             time = br.ReadUInt32
             id = br.ReadUInt32
-            ex = br.ReadUInt32
+            ex = New String(br.ReadChars(4))
             numkeys = br.ReadUInt32
-            namelen = br.ReadUInt32
+            namelen = New String(br.ReadChars(4))
         End Sub    
     End Class
 
