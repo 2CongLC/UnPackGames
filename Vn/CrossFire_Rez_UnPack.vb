@@ -118,12 +118,12 @@ Module Program
 
     Sub Decrypt(ByRef buffer() As Byte, ByVal size As Integer, ByVal keyPos As Integer)
         For i As Integer = 0 To size - 1
-            buffer(i) = &H49 + (KEY(keyPos Mod KEY.Length) Xor Not buffer(i))
+            buffer(i) = &H49 + (KEYS(keyPos Mod KEYS.Length) Xor Not buffer(i))
             keyPos += 1
         Next
     End Sub
 
-    Dim KEY() As Byte = {
+    Dim KEYS() As Byte = {
     &HF0, &HF0, &H9D, &H09, &H0A, &H66, &HAD, &H6A, &H85, &H1D, 
     &HFD, &H3F, &H51, &H23, &HE7, &HF3, &HB1, &H0E, &H78, &HEC, 
     &HD1, &H50, &H7B, &H6B, &H17, &H3F, &H61, &HC5, &H79, &H0C, 
