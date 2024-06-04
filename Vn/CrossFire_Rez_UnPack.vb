@@ -69,7 +69,12 @@ Module Program
 
             For Each td as TableData in subtables
                 n = td.name
-                extension  = td.ext
+            Next
+
+            For Each fd as FileData in subfiles
+                Dim ext As String = New String(BitConverter.GetBytes(fd.ext).Reverse().Select(Function(c) CChar(c)).ToArray())
+                
+            Next
 
            
         End If
@@ -93,7 +98,7 @@ Module Program
         Dim size as UInt32 ' Length = 4
         Dim time as UInt32 ' Length = 4
         Dim id as UInt32 ' Length = 4
-        Dim ext as String ' Length = 4
+        Dim ext as UInt32 ' Length = 4
         Dim numkeys as UInt32 ' Length = 4
         Dim namelen as String ' Length = 4
         Public Sub New()
@@ -101,7 +106,7 @@ Module Program
             size = br.ReadUInt32
             time = br.ReadUInt32
             id = br.ReadUInt32
-            ex = New String(br.ReadChars(4))
+            ex = br.ReadUInt32
             numkeys = br.ReadUInt32
             namelen = New String(br.ReadChars(4))
         End Sub    
