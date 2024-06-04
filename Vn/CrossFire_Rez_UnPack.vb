@@ -44,20 +44,35 @@ Module Program
 
             br.BaseStream.Seek(RootDirPos, SeekOrigin.Begin)
             Dim buffer as Byte() = New Byte(RootDirSize){}
-            
+            br.Read(buffer, 0, RootDirSize)
+            Decrypt(buffer, RootDirSize, RootDirPos)
+            Dim startpos as UInt32 = buffer.Length
+            Dim endpos as UInt32 = startpos + RootDirSize
+            Dim subtables as New List(Of TableData)()
+            Dim subfiles as New List(Of FileData)()
+            While startpos < endpos
+                Dim types as UInt32 = startpos
+                startpos += 4
+                If types = 1 Then
+                    subtables
+                    Add(New TableData)
+                    startpos += 16
+                 Elsle
+                    Dim 
 
 
+                End If    
 
-
+            End While
 
         End If
     End Sub
 
     Class TableData
-        Dim pos as UInt32
-        Dim size as UInt32
-        Dim time as UInt32
-        Dim namelen as UInt32
+        Dim pos as UInt32 ' Length = 4
+        Dim size as UInt32 ' Length = 4
+        Dim time as UInt32 ' Length = 4
+        Dim namelen as UInt32 ' Length = 4
         Public Sub New()
             pos = br.ReadUInt32
             size = br.ReadUInt32
