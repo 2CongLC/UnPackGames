@@ -52,8 +52,37 @@ Module Program
 
         End If
     End Sub
-    Class FileData
 
+    Class TableData
+        Dim pos as UInt32
+        Dim size as UInt32
+        Dim time as UInt32
+        Dim name as UInt32
+        Public Sub New()
+            pos = br.ReadUInt32
+            size = br.ReadUInt32
+            time = br.ReasUInt32
+            name = br.ReadUInt32
+        End Sub
+    End Class
+    
+    Class FileData
+        Dim pos as UInt32
+        Dim size as UInt32
+        Dim time as UInt32
+        Dim id as UInt32
+        Dim ex as UInt32
+        Dim numkeys as UInt32
+        Dim numlength as UInt32
+        Public Sub New()
+            pos = br.ReadUInt32
+            size = br.ReadUInt32
+            time = br.ReadUInt32
+            id = br.ReadUInt32
+            ex = br.ReadUInt32
+            numkeys = br.ReadUInt32
+            numlength = br.ReadUInt32
+        End Sub    
     End Class
 
     
