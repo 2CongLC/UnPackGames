@@ -42,6 +42,10 @@ Module Program
             Dim LargestCommentSize As UInt32 = br.ReadUInt32 ' Offset = 170, Length = 4
             Dim IsSorted As Byte = br.ReadByte ' Offset = 174, Length = 1
 
+            br.BaseStream.Seek(RootDirPos, SeekOrigin.Begin)
+            Dim buffer as Byte() = New Byte(RootDirSize){}
+            
+
 
 
 
