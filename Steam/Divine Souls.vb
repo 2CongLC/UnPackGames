@@ -1,4 +1,4 @@
-Dim des as String = Path.GetDirectoryName(source) + "/" + Path.GetFileNameWithoutExtension(source)
+Dim des as String = Path.GetDirectoryName(source) + "\" + Path.GetFileNameWithoutExtension(source)
 Dim dfp as new BinaryReader(File.OpenRead(des + ".dfp")
 Dim dfh as New BinaryReader(File.OpenRead(des + ".dfh")
 
@@ -16,30 +16,30 @@ For i as Int32 = 0 To count - 1
  dfh.BaseStream.Position = offset
  Dim buffer as Byte() = br.ReadBytes(size)
     
- Using bw as New BinaryWriter(File.Create(des & "/" & i)
+ Using bw as New BinaryWriter(File.Create(des & "\" & i)
      bw.Write(buffer)
  End Using
 
- Dim br as New BinaryReader(File.OpenRead(des & "/" & i)
+ Dim br as New BinaryReader(File.OpenRead(des & "\" & i)
  Dim sign as String = New String(br.ReadChars(4))
  If sign = "Game" Then
     sign += New String(br.ReadChars(9))
  br.close()
 
 If sign = "DDS " Then
-    File.Move(des + "/" + i, des + "/" + i + ".dds")
+    File.Move(des + "\" + i, des + "\" + i + ".dds")
 ElseIf sign = "Gamebryo File" Then
-    File.Move(des + "/" + i, des + "/" + i + ".nif")
+    File.Move(des + "\" + i, des + "\" + i + ".nif")
 ElseIf sign = "Gamebryo KFM" Then
-    File.Move(des + "/" + i, des + "/" + i + ".kfm")
+    File.Move(des + "\" + i, des + "\" + i + ".kfm")
 ElseIf sign = " Lua" Then
-    File.Move(des + "/" + i, des + "/" + i + ".lua")
+    File.Move(des + "\" + i, des + "\" + i + ".lua")
 ElseIf sign = "RIFF" Then
-    File.Move(des + "/" + i, des + "/" + i + ".wav")
+    File.Move(des + "\" + i, des + "\" + i + ".wav")
 ElseIf sign = "ÿûâ`" Then
-    File.Move(des + "/" + i, des + "/" + i + ".mp3")
+    File.Move(des + "\" + i, des + "\" + i + ".mp3")
 Else
-    File.Move(des + "/" + i, des + "/" + i + ".unknow")
+    File.Move(des + "\" + i, des + "\" + i + ".unknow")
 End If
 Next
 Console.WriteLine("Unpack done!")
