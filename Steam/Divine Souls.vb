@@ -30,7 +30,16 @@ If sign = "DDS " Then
     File.Move(des + "/" + i, des + "/" + i + ".dds")
 ElseIf sign = "Gamebryo File" Then
     File.Move(des + "/" + i, des + "/" + i + ".nif")
-
+ElseIf sign = "Gamebryo KFM" Then
+    File.Move(des + "/" + i, des + "/" + i + ".kfm")
+ElseIf sign = " Lua" Then
+    File.Move(des + "/" + i, des + "/" + i + ".lua")
+ElseIf sign = "RIFF" Then
+    File.Move(des + "/" + i, des + "/" + i + ".wav")
+ElseIf sign = "ÿûâ`" Then
+    File.Move(des + "/" + i, des + "/" + i + ".mp3")
+Else
+    File.Move(des + "/" + i, des + "/" + i + ".unknow")
 End If
 Next
 Console.WriteLine("Unpack done!")
