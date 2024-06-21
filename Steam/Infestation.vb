@@ -32,11 +32,11 @@ For Each fd as FileData In subfiles
  Console.WriteLine("File Offset : {0} - File Size : {1} - File Name : {2},fd.offset, fd.size, fd.name)
  br.BaseStream.Position = fd.offset
  Dim buffer as Byte() 
- Directory.CreateDirectory(des + Path.GetDirectoryName(fd.name))
+ Directory.CreateDirectory(des + Path.GetFileNameWithoutExtension(source) + "\" + Path.GetDirectoryName(fd.name))
  
  If fd.iscompressed = 2 Then
     buffer = br.ReadBytes(sizeCompressed)
-    Dim fs as  FileStream = File.Create(des + fd.name)
+    Dim fs as  FileStream = File.Create(des + Path.GetFileNameWithoutExtension(source) + "\" + fd.name)
     Dim unknow1 as Int16 = br.ReadInt16
     Using dfs as New DeflateStream(New MemoryStream(buffer), CompressionMode.Decompress)
       dfs.copyto(fs)
@@ -44,7 +44,7 @@ For Each fd as FileData In subfiles
     fs.close()
   Else
     buffer = br.ReadBytes(sizeUncompressed)
-    Using bw as New BinaryWriter(des + fd.name)
+    Using bw as New BinaryWriter(des + Path.GetFileNameWithoutExtension(source) + "\" + fd.name)
       bw.Write(buffer)
     End Using
   End If
