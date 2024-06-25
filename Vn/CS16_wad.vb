@@ -15,3 +15,27 @@ br.BaseStream.Position = offset_FileData
 For i as Int32 = 0 To count_FileData - 1
  subfiles.Add(New FileData)
 Next
+
+Directory.Create(des)
+
+For Each fd as FileData in subfiles
+
+Next
+
+
+
+
+==========
+
+Class FileData
+ Public offset as UInt32 = br.ReadUInt32
+ Public sizeCompressed as UInt32 = br.ReadUInt32
+ Public size as UInt32 = br.ReadUInt32
+ Public types as Byte = br.ReadByte
+ Public compression as Byte = br.ReadByte
+ Public name as String
+ Public Sub New()
+  br.BaseStream.Seek(2, SeekOrigin.Current)
+  
+
+End Class
