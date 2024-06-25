@@ -36,6 +36,6 @@ Class FileData
  Public name as String
  Public Sub New()
   br.BaseStream.Seek(2, SeekOrigin.Current)
-  
-
+  name = New String(br.ReadChars(16)).TrimEnd(ChrW(0))
+ End Sub
 End Class
