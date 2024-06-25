@@ -1,3 +1,5 @@
+' https://github.com/yuraj11/HL-Texture-Tools/blob/master/HL%20Texture%20Tools/HLTools/WAD3Loader.cs
+
 Private br as BinaryReader
 Private des as String
 Private source as String
