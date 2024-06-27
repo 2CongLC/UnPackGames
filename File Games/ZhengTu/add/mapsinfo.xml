@@ -1,0 +1,1979 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by wt (zt) -->
+<!-- 天气的描述 rain:雨，snow:雪，cloud:云雾。date 对应每一时段的天气类型。level 天气级别，（小雨，中雨，大雨; 小雪，中雪，大雪） -->
+<maps>
+	<map name="qingyuancun-main" backmusic="">
+		<zones>
+			<zone id="1" name="清源村" backmusic="YSCbeijing.mp3" Priority="2" MinInterval="100000" MaxInterval="120000"/>
+			<zone id="2" name="清源村南" backmusic="XSLbeijing.mp3" Priority="1" MinInterval="130000" MaxInterval="150000"/>
+		</zones>
+		<weather>
+			<date start="195" end="198">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="2" end="4">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="11" end="13">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="165" end="168">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="1" name="征途唯大凤凰城方向" x="14" y="125"/>
+			<exit id="2" name="征途唯大凤凰城方向" x="172" y="458"/>
+		</exits>
+	</map>
+	<map name="fengshoucun-main" backmusic="FSCbeijing.mp3" MinInterval="80000" MaxInterval="100000">
+		<zones>
+			<zone id="1" name="山寨前哨"/>
+		</zones>
+		<weather>
+			<date start="195" end="198">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="2" end="4">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="11" end="13">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="165" end="168">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="3" name="凤尾村方向" x="59" y="216"/>
+			<exit id="4" name="龙冈山一寨方向" x="16" y="16"/>
+		</exits>
+	</map>
+	<map name="fengweicun-main" backmusic="">
+		<zones>
+			<zone id="1" name="凤尾村" backmusic="FWCbeijing.mp3" MinInterval="140000" MaxInterval="150000"/>
+		</zones>
+		<weather>
+			<date start="195" end="198">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="2" end="4">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="11" end="13">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="165" end="168">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="5" name="征途唯大王城方向" x="94" y="235"/>
+			<exit id="6" name="山寨前哨方向" x="15" y="16"/>
+		</exits>
+	</map>
+	<map name="shilian1" backmusic=""/>
+	<map name="shilian2" backmusic=""/>
+	<map name="shanzhai1" backmusic="">
+		<zones>
+			<zone id="1" name="龙冈山一寨" backmusic="FHlgs.mp3" MinInterval="74000" MaxInterval="90000"/>
+		</zones>
+		<weather>
+			<date start="195" end="198">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="2" end="4">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="11" end="13">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="165" end="168">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="8" name="山寨前哨方向" x="18" y="289"/>
+			<exit id="9" name="龙冈山二寨方向" x="150" y="16"/>
+		</exits>
+	</map>
+	<map name="shanzhai2" backmusic="">
+		<zones>
+			<zone id="1" name="龙冈山二寨" backmusic="FHlgs.mp3" MinInterval="74000" MaxInterval="90000"/>
+		</zones>
+		<weather>
+			<date start="195" end="198">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="2" end="4">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="11" end="13">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="165" end="168">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="10" name="龙冈山一寨方向" x="50" y="264"/>
+			<exit id="11" name="龙冈山三寨方向" x="212" y="36"/>
+		</exits>
+	</map>
+	<map name="shanzhai3" backmusic="">
+		<zones>
+			<zone id="1" name="龙冈山三寨" backmusic="FHlgs.mp3" MinInterval="74000" MaxInterval="90000"/>
+		</zones>
+		<weather>
+			<date start="195" end="198">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="2" end="4">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="11" end="13">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="165" end="168">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="12" name="龙冈山二寨方向" x="28" y="259"/>
+			<exit id="13" name="龙冈山四寨方向" x="148" y="15"/>
+		</exits>
+	</map>
+	<map name="shanzhai4" backmusic="">
+		<zones>
+			<zone id="1" name="龙冈山四寨" backmusic="FHlgs.mp3" MinInterval="74000" MaxInterval="90000"/>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="25">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="14" name="龙冈山三寨方向" x="169" y="193"/>
+		</exits>
+	</map>
+	<map name="fenghuangcheng-main" backmusic="">
+		<zones>
+			<zone id="4" name="==四月网络==" backmusic="PKCbeijing.mp3" Priority="2" MinInterval="100000" MaxInterval="120000"/>
+			<zone id="1" name="凤凰城方向西门" backmusic="XSLbeijing.mp3" Priority="1" MinInterval="130000" MaxInterval="150000"/>
+			<zone id="2" name="凤凰城方向南门" backmusic="XSLbeijing.mp3" Priority="1" MinInterval="130000" MaxInterval="150000"/>
+			<zone id="3" name="凤凰城方向东门" backmusic="XSLbeijing.mp3" Priority="1" MinInterval="130000" MaxInterval="150000"/>
+			<zone id="6" name="摆摊区" backmusic="BTbeijing.mp3" Priority="8" MinInterval="80000" MaxInterval="90000"/>
+			<zone id="8" name="清源村方向" backmusic="XSLbeijing.mp3" Priority="1" MinInterval="338000" MaxInterval="360000"/>
+			<zone id="9" name="东郊方向"/>
+			<zone id="10" name="百兽谷方向"/>
+			<zone id="11" name="凤尾村方向"/>
+			<zone id="12" name="海岸东部"/>
+			<zone id="13" name="海岸南部"/>
+			<zone id="14" name="清源河"/>
+			<zone id="15" name="城南农田" backmusic="FHnt.mp3" MinInterval="74000" MaxInterval="80000"/>
+			<zone id="16" name="涅磐坡"/>
+			<zone id="17" name="凤饮潭" backmusic="FHfyt.mp3" MinInterval="60000" MaxInterval="70000"/>
+			<zone id="18" name="城北官道"/>
+			<zone id="19" name="焦土林"/>
+			<zone id="20" name="浅草滩" backmusic="FHfyt.mp3" MinInterval="60000" MaxInterval="70000"/>
+			<zone id="21" name="凤凰城方向" backmusic="FHCbeijing.mp3" Priority="2" MinInterval="150000" MaxInterval="180000"/>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="165" end="168">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="15" name="凤尾村方向" x="132" y="17"/>
+			<exit id="16" name="清源村方向" x="475" y="17"/>
+			<exit id="17" name="清源村方向" x="585" y="260"/>
+			<exit id="18" name="东郊方向" x="15" y="370"/>
+		</exits>
+	</map>
+	<map name="fengzuiling" backmusic="">
+		<zones>
+			<zone id="1" name="千江镇方向"/>
+			<zone id="2" name="沼湿地方向"/>
+			<zone id="3" name="凤祥镇方向"/>
+			<zone id="4" name="凤祥镇西郊方向"/>
+			<zone id="5" name="征途唯大王城方向"/>
+			<zone id="6" name="凤翼村"/>
+			<zone id="7" name="雀眼池"/>
+			<zone id="8" name="凤翎河"/>
+			<zone id="9" name="兵寨废墟"/>
+			<zone id="10" name="凤吟坡"/>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="2" end="4">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="25">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="131" name="征途唯大王城方向" x="14" y="548"/>
+			<exit id="132" name="千江镇方向" x="14" y="85"/>
+			<exit id="133" name="凤祥镇西郊方向" x="585" y="512"/>
+			<exit id="140" name="沼泽湿地方向" x="288" y="585"/>
+			<exit id="141" name="风祥镇方向" x="585" y="160"/>
+		</exits>
+	</map>
+	<map name="fengxiangzhen-main" backmusic="">
+		<zones>
+			<zone id="1" name="北郊方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="134" name="北郊方向" x="13" y="183"/>
+		</exits>
+	</map>
+	<map name="haizeiyingdi" backmusic="">
+		<zones>
+			<zone id="1" name="征途唯大皇城方向" backmusic="">
+			</zone>
+			<zone id="2" name="小岛方向" backmusic="">
+			</zone>
+			<zone id="3" name="小岛方向" backmusic="">
+			</zone>
+			<zone id="4" name="滨海之岛方向" backmusic="">
+			</zone>
+			<zone id="5" name="滨海之岛" backmusic="Zlwcyd.mp3" Priority="2" MinInterval="30000" MaxInterval="60000">
+			</zone>
+			<zone id="6" name="小岛" backmusic="Zlwcyd.mp3" Priority="3" MinInterval="30000" MaxInterval="60000">
+			</zone>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="19" name="征途唯大皇城方向" x="14" y="126"/>
+		</exits>
+	</map>
+	<map name="qianjiangzhen-main" backmusic="QJZbeijing.mp3" Priority="2" MinInterval="140000" MaxInterval="150000">
+		<zones>
+			<zone id="1" name="北郊方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="21" name="北郊方向" x="202" y="14"/>
+		</exits>
+	</map>
+	<map name="baishougu">
+		<zones>
+			<zone id="1" name="百兽谷" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="166" name="征途唯大王城方向" x="276" y="229"/>
+			<exit id="167" name="兽王谷方向" x="18" y="259"/>
+		</exits>
+	</map>
+	<map name="shouwanggu" backmusic="BGDbeijing.mp3" Priority="20" MinInterval="80000" MaxInterval="80000">
+		<zones>
+			<zone id="1" name="兽王谷" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="168" name="百兽谷方向" x="187" y="22"/>
+		</exits>
+	</map>
+	<map name="jiaolongdong1">
+		<weather>
+			<date start="320" end="322">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="23" name="沼泽湿地方向" x="23" y="207"/>
+			<exit id="24" name="蛟龙洞二方向" x="211" y="48"/>
+		</exits>
+	</map>
+	<map name="jiaolongdong2">
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="151">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="25" name="蛟龙洞一方向" x="14" y="90"/>
+		</exits>
+	</map>
+	<map name="luanzangku1" backmusic="BGDbeijing.mp3" Priority="3" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="白骨洞二层方向" backmusic="">
+			</zone>
+			<zone id="2" name="征途唯大王城方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="151">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="26" name="征途唯大王城方向" x="47" y="235"/>
+			<exit id="27" name="白骨洞二层方向" x="380" y="260"/>
+		</exits>
+	</map>
+	<map name="luanzangku2" backmusic="BGDbeijing.mp3" Priority="4" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="白骨洞一层方向" backmusic="">
+			</zone>
+			<zone id="2" name="白骨洞三层方向"/>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="151">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="28" name="白骨洞一层方向" x="77" y="111"/>
+			<exit id="29" name="白骨洞三层方向" x="148" y="341"/>
+		</exits>
+	</map>
+	<map name="luanzangku3" backmusic="BGDbeijing.mp3" Priority="5" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="白骨洞二层方向" backmusic="">
+			</zone>
+			<zone id="2" name="白骨洞四层方向"/>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="151">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="30" name="白骨洞二层方向" x="168" y="13"/>
+			<exit id="31" name="白骨洞四层方向" x="33" y="231"/>
+		</exits>
+	</map>
+	<map name="luanzangku4" backmusic="BGDbeijing.mp3" Priority="6" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="白骨洞三层方向" backmusic="">
+			</zone>
+			<zone id="2" name="白骨洞五层方向"/>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="32" name="白骨洞三层方向" x="252" y="100"/>
+			<exit id="33" name="白骨洞五层方向" x="93" y="323"/>
+		</exits>
+	</map>
+	<map name="luanzangku5" backmusic="BGDbeijing.mp3" Priority="7" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="白骨洞四层方向" backmusic="">
+			</zone>
+			<zone id="2" name="白骨洞六层方向"/>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="151">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="34" name="白骨洞四层方向" x="263" y="145"/>
+			<exit id="35" name="白骨洞六层方向" x="8" y="149"/>
+		</exits>
+	</map>
+	<map name="luanzangku6" backmusic="BGDbeijing.mp3" Priority="8" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="白骨洞五层方向" backmusic="">
+			</zone>
+			<zone id="2" name="白骨洞七层方向"/>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="151">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="36" name="白骨洞五层方向" x="238" y="161"/>
+			<exit id="37" name="白骨洞七层方向" x="9" y="200"/>
+		</exits>
+	</map>
+	<map name="luanzangku7" backmusic="BGDbeijing.mp3" Priority="9" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="白骨洞六层方向" backmusic="">
+			</zone>
+			<zone id="2" name="白骨洞八层方向"/>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="151">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="38" name="白骨洞六层方向" x="127" y="306"/>
+			<exit id="39" name="白骨洞八层方向" x="183" y="66"/>
+		</exits>
+	</map>
+	<map name="luanzangku8" backmusic="BGDbeijing.mp3" Priority="10" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="白骨洞七层方向" backmusic="">
+			</zone>
+			<zone id="2" name="白骨洞九层方向"/>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="151">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="40" name="白骨洞七层右方向" x="105" y="304"/>
+			<exit id="41" name="白骨洞九层右方向" x="193" y="45"/>
+		</exits>
+	</map>
+	<map name="luanzangku9" backmusic="BGDbeijing.mp3" Priority="11" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="白骨洞八层方向" backmusic="">
+			</zone>
+			<zone id="2" name="白骨洞十层方向"/>
+		</zones>
+		<weather>
+			<date start="320" end="322">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="42" name="白骨洞八层方向" x="102" y="311"/>
+			<exit id="43" name="白骨洞十层方向" x="200" y="81"/>
+		</exits>
+	</map>
+	<map name="luanzangku10" backmusic="BGDbeijing.mp3" Priority="12" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="白骨洞九层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="44" name="白骨洞九层方向" x="328" y="314"/>
+		</exits>
+	</map>
+	<map name="you1">
+		<zones>
+			<zone id="1" name="幽冥二方向" backmusic="">
+			</zone>
+			<zone id="2" name="征途唯大王城方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="169" name="征途唯大王城方向" x="47" y="235"/>
+			<exit id="170" name="幽冥二层方向" x="380" y="260"/>
+		</exits>
+	</map>
+	<map name="you2">
+		<zones>
+			<zone id="1" name="幽冥一方向" backmusic="">
+			</zone>
+			<zone id="2" name="幽冥三方向"/>
+		</zones>
+		<exits>
+			<exit id="171" name="幽冥一层方向" x="77" y="111"/>
+			<exit id="172" name="幽冥三层方向" x="148" y="341"/>
+		</exits>
+	</map>
+	<map name="you3">
+		<zones>
+			<zone id="1" name="幽冥二方向" backmusic="">
+			</zone>
+			<zone id="2" name="幽冥四方向"/>
+		</zones>
+		<exits>
+			<exit id="173" name="幽冥二层方向" x="168" y="13"/>
+			<exit id="174" name="幽冥四层方向" x="33" y="231"/>
+		</exits>
+	</map>
+	<map name="you4">
+		<zones>
+			<zone id="1" name="幽冥三方向" backmusic="">
+			</zone>
+			<zone id="2" name="幽冥五方向"/>
+		</zones>
+		<exits>
+			<exit id="175" name="幽冥三层方向" x="252" y="100"/>
+			<exit id="176" name="幽冥五层方向" x="93" y="323"/>
+		</exits>
+	</map>
+	<map name="you5">
+		<zones>
+			<zone id="1" name="幽冥四方向" backmusic="">
+			</zone>
+			<zone id="2" name="幽冥六方向"/>
+		</zones>
+		<exits>
+			<exit id="177" name="幽冥四层方向" x="263" y="145"/>
+			<exit id="178" name="幽冥六层方向" x="8" y="149"/>
+		</exits>
+	</map>
+	<map name="you6">
+		<zones>
+			<zone id="1" name="幽冥五方向" backmusic="">
+			</zone>
+			<zone id="2" name="幽冥七方向"/>
+		</zones>
+		<exits>
+			<exit id="179" name="幽冥五层方向" x="238" y="161"/>
+			<exit id="180" name="幽冥七层方向" x="9" y="200"/>
+		</exits>
+	</map>
+	<map name="you7">
+		<zones>
+			<zone id="1" name="幽冥六方向" backmusic="">
+			</zone>
+			<zone id="2" name="幽冥八方向"/>
+		</zones>
+		<exits>
+			<exit id="181" name="幽冥六层方向" x="127" y="306"/>
+			<exit id="182" name="幽冥八层方向" x="183" y="66"/>
+		</exits>
+	</map>
+	<map name="you8">
+		<zones>
+			<zone id="1" name="幽冥七方向" backmusic="">
+			</zone>
+			<zone id="2" name="幽冥九方向"/>
+		</zones>
+		<exits>
+			<exit id="183" name="幽冥七层右方向" x="105" y="304"/>
+			<exit id="184" name="幽冥九层右方向" x="193" y="45"/>
+		</exits>
+	</map>
+	<map name="you9">
+		<zones>
+			<zone id="1" name="幽冥八方向" backmusic="">
+			</zone>
+			<zone id="2" name="幽冥十方向"/>
+		</zones>
+		<exits>
+			<exit id="185" name="幽冥八层方向" x="102" y="311"/>
+			<exit id="186" name="幽冥十层方向" x="200" y="81"/>
+		</exits>
+	</map>
+	<map name="you10">
+		<zones>
+			<zone id="1" name="幽冥九方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="187" name="幽冥九层方向" x="328" y="314"/>
+		</exits>
+	</map>
+	<map name="fengxiangzhenxijiao">
+		<zones>
+			<zone id="1" name="北郊方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="58" name="北郊方向" x="14" y="277"/>
+		</exits>
+	</map>
+	<map name="zhaozeshidi">
+		<zones>
+			<zone id="1" name="北郊方向" backmusic="">
+			</zone>
+			<zone id="2" name="蛟龙洞方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<cloud level="1" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="49" name="北郊方向" x="32" y="15"/>
+			<exit id="50" name="蛟龙洞一方向" x="126" y="38"/>
+		</exits>
+	</map>
+	<map name="sanchaling">
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="51" name="千江镇方向" x="185" y="160"/>
+			<exit id="52" name="北郊方向" x="185" y="79"/>
+		</exits>
+	</map>
+	<map name="baishougudao">
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="54" name="百兽谷方向" x="185" y="170"/>
+			<exit id="55" name="东郊方向" x="22" y="46"/>
+		</exits>
+	</map>
+	<map name="chuansongdian">
+		<zones>
+			<zone id="1" name="征途唯大皇城方向" backmusic="">
+			</zone>
+			<zone id="2" name="东郊方向" backmusic="">
+			</zone>
+			<zone id="3" name="南郊方向" backmusic="">
+			</zone>
+			<zone id="4" name="征途唯大世外桃源" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="56" name="征途唯大皇城方向" x="369" y="247"/>
+			<exit id="57" name="南郊方向" x="28" y="285"/>
+			<exit id="100" name="东郊方向" x="80" y="14"/>
+		</exits>
+	</map>
+	<map name="huangcheng">
+		<zones>
+			<zone id="1" name="边境方向" backmusic="">
+			</zone>
+			<zone id="2" name="功能区（绝对安全区）" backmusic="">
+			</zone>
+			<zone id="3" name="资源采集区" backmusic="ZLcj.mp3" Priority="3" MinInterval="35000" MaxInterval="60000">
+			</zone>
+			<zone id="4" name="旧皇城方向" backmusic="HCbeijing.mp3" Priority="1" MinInterval="40000" MaxInterval="60000">
+			</zone>
+			<zone id="5" name="滨海之岛方向" backmusic="">
+			</zone>
+			<zone id="6" name="魔族巢穴方向" backmusic="">
+			</zone>
+			<zone id="7" name="栖息地方向" backmusic="">
+			</zone>
+			<zone id="8" name="机械工厂方向" backmusic="">
+			</zone>
+			<zone id="9" name="武夷王墓方向" backmusic="">
+			</zone>
+			<zone id="10" name="摆摊区" backmusic="BTbeijing.mp3" Priority="8" MinInterval="80000" MaxInterval="90000">
+			</zone>
+			<zone id="11" name="征途唯大皇城大殿" backmusic="WGbeijing.mp3" Priority="2" MinInterval="80000" MaxInterval="90000">
+			</zone>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="58" name="边境方向" x="829" y="980"/>
+			<exit id="232" name="东海之滨方向" x="986" y="65"/>
+			<exit id="233" name="圣灵之地方向" x="22" y="14"/>
+			<exit id="234" name="栖息地方向" x="34" y="985"/>
+			<exit id="235" name="机械工厂方向" x="882" y="489"/>
+			<exit id="236" name="武夷亡墓方向" x="130" y="165"/>
+		</exits>
+	</map>
+	<map name="dongjiao" backmusic="WCdj.mp3" MinInterval="50000" MaxInterval="60000">
+		<zones>
+			<zone id="1" name="征途唯大王城方向" backmusic="">
+			</zone>
+			<zone id="2" name="边境方向" backmusic="">
+			</zone>
+			<zone id="3" name="征途唯大凤凰城方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="60" name="边境方向" x="375" y="383"/>
+			<exit id="79" name="征途唯大王城方向" x="14" y="328"/>
+			<exit id="81" name="征途唯大凤凰城方向" x="378" y="36"/>
+		</exits>
+	</map>
+	<map name="nanjiao">
+		<zones>
+			<zone id="1" name="征途唯大王城方向" backmusic="">
+			</zone>
+			<zone id="2" name="边境方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="62" name="边境方向" x="385" y="114"/>
+			<exit id="63" name="征途唯大王城方向" x="11" y="16"/>
+		</exits>
+	</map>
+	<map name="xiashuidao">
+		<zones>
+			<zone id="1" name="东郊方向" backmusic="">
+			</zone>
+			<zone id="2" name="征途唯大王城方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="64" name="东郊方向" x="99" y="19"/>
+			<exit id="65" name="征途唯大王城方向" x="23" y="46"/>
+		</exits>
+	</map>
+	<map name="fenghuangchenghuanggongmishi">
+		<zones>
+			<zone id="1" name="密室方向"/>
+			<zone id="2" name="密室方向"/>
+		</zones>
+		<exits/>
+	</map>
+	<map name="fenghuangchengdadian">
+		<zones>
+			<zone id="1" name="征途唯大凤凰城方向"/>
+		</zones>
+		<exits>
+			<exit id="87" name="征途唯大凤凰城方向" x="16" y="105"/>
+			<exit id="88" name="征途唯大凤凰城方向" x="70" y="52"/>
+		</exits>
+	</map>
+	<map name="wushuangcheng-main">
+		<zones>
+			<zone id="1" name="征途唯大王城方向" backmusic="WCbeijing.mp3" Priority="2" MinInterval="140000" MaxInterval="180000"/>
+			<zone id="2" name="摆摊区" backmusic="BTbeijing.mp3" Priority="8" MinInterval="80000" MaxInterval="90000"/>
+			<zone id="4" name="竞技场" backmusic="PKCbeijing.mp3" Priority="2" MinInterval="120000" MaxInterval="180000"/>
+			<zone id="9" name="北郊方向" backmusic="" Priority="1"/>
+			<zone id="10" name="东郊方向" backmusic="" Priority="1"/>
+			<zone id="11" name="南郊方向" backmusic="" Priority="1"/>
+			<zone id="13" name="白骨洞入口" backmusic="" Priority="1"/>
+			<zone id="14" name="精怪洞穴入口" backmusic="" Priority="1"/>
+			<zone id="5" name="东门" backmusic="XSLbeijing.mp3" Priority="1" MinInterval="140000" MaxInterval="180000"/>
+			<zone id="6" name="西门" backmusic="XSLbeijing.mp3" Priority="1" MinInterval="140000" MaxInterval="180000"/>
+			<zone id="7" name="南门" backmusic="XSLbeijing.mp3" Priority="1" MinInterval="140000" MaxInterval="180000"/>
+			<zone id="8" name="北门" backmusic="XSLbeijing.mp3" Priority="1" MinInterval="140000" MaxInterval="180000"/>
+			<zone id="15" name="王宫" backmusic="WGbeijing.mp3" Priority="3" MinInterval="80000" MaxInterval="90000"/>
+			<zone id="18" name="绝对安全区" backmusic="" Priority="2" MinInterval="3988000" MaxInterval="1200000"/>
+			<zone id="19" name="绝对安全区" backmusic="" Priority="2" MinInterval="3988000" MaxInterval="1200000"/>
+			<zone id="20" name="绝对安全区" backmusic="" Priority="2" MinInterval="3988000" MaxInterval="1200000"/>
+			<zone id="21" name="下水道入口" backmusic="" Priority="2" MinInterval="3988000" MaxInterval="1200000"/>
+		</zones>
+		<weather>
+			<date start="201" end="203">
+				<rain level="1" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="1" end="3">
+				<snow level="1" backmusic=""/>
+			</date>
+			<date start="20" end="22">
+				<snow level="2" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<rain level="3" backmusic="weather-rainx.WAV"/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="45" name="北郊方向" x="14" y="114"/>
+			<exit id="66" name="东郊方向" x="979" y="16"/>
+			<exit id="80" name="南郊方向" x="988" y="973"/>
+			<exit id="174" name="精怪洞穴方向" x="921" y="646"/>
+			<exit id="175" name="白骨洞方向" x="832" y="97"/>
+		</exits>
+	</map>
+	<map name="wushuangchenghuanggongmishi">
+		<zones>
+			<zone id="1" name="密室方向"/>
+			<zone id="2" name="密室方向"/>
+		</zones>
+	</map>
+	<map name="wushuangchengdadian">
+		<zones>
+			<zone id="1" name="征途唯大王城方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="94" name="征途唯大王城方向" x="16" y="105"/>
+			<exit id="95" name="征途唯大王城方向" x="70" y="52"/>
+		</exits>
+	</map>
+	<map name="jingguai1" backmusic="BGDbeijing.mp3" Priority="3" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="征途唯大王城方向" backmusic="">
+			</zone>
+			<zone id="2" name="洞穴二方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="100" name="征途唯大王城方向" x="115" y="209"/>
+			<exit id="101" name="洞穴二层方向" x="133" y="32"/>
+		</exits>
+	</map>
+	<map name="jingguai2" backmusic="BGDbeijing.mp3" Priority="4" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="洞穴一方向" backmusic="">
+			</zone>
+			<zone id="2" name="洞穴三方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="102" name="洞穴一层方向" x="139" y="19"/>
+			<exit id="103" name="洞穴三层方向" x="26" y="128"/>
+		</exits>
+	</map>
+	<map name="jingguai3" backmusic="BGDbeijing.mp3" Priority="5" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="洞穴二方向" backmusic="">
+			</zone>
+			<zone id="2" name="洞穴四方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="104" name="洞穴二层方向" x="35" y="86"/>
+			<exit id="105" name="洞穴四层方向" x="217" y="112"/>
+		</exits>
+	</map>
+	<map name="jingguai4" backmusic="BGDbeijing.mp3" Priority="6" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="洞穴三方向" backmusic="">
+			</zone>
+			<zone id="2" name="洞穴五方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="106" name="洞穴三层方向" x="201" y="104"/>
+			<exit id="107" name="洞穴五层方向" x="35" y="132"/>
+		</exits>
+	</map>
+	<map name="jingguai5" backmusic="BGDbeijing.mp3" Priority="7" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="洞穴四方向" backmusic="">
+			</zone>
+			<zone id="2" name="洞穴六方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="108" name="洞穴四层方向" x="26" y="137"/>
+			<exit id="109" name="洞穴六层方向" x="130" y="90"/>
+		</exits>
+	</map>
+	<map name="jingguai6" backmusic="BGDbeijing.mp3" Priority="8" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="洞穴五方向" backmusic="">
+			</zone>
+			<zone id="2" name="洞穴七方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="110" name="洞穴五层方向" x="137" y="105"/>
+			<exit id="111" name="洞穴七层方向" x="13" y="124"/>
+		</exits>
+	</map>
+	<map name="jingguai7" backmusic="BGDbeijing.mp3" Priority="9" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="洞穴六方向" backmusic="">
+			</zone>
+			<zone id="2" name="洞穴八方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="112" name="洞穴六层方向" x="25" y="116"/>
+			<exit id="113" name="洞穴八层方向" x="102" y="66"/>
+		</exits>
+	</map>
+	<map name="jingguai8" backmusic="BGDbeijing.mp3" Priority="10" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="洞穴七方向" backmusic="">
+			</zone>
+			<zone id="2" name="洞穴九方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="114" name="洞穴七层方向" x="164" y="57"/>
+			<exit id="115" name="洞穴九层方向" x="43" y="166"/>
+		</exits>
+	</map>
+	<map name="jingguai9" backmusic="BGDbeijing.mp3" Priority="11" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="洞穴八方向" backmusic="">
+			</zone>
+			<zone id="2" name="洞穴十方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="116" name="洞穴八层方向" x="135" y="85"/>
+			<exit id="117" name="洞穴十层方向" x="33" y="224"/>
+		</exits>
+	</map>
+	<map name="jingguai10" backmusic="BGDbeijing.mp3" Priority="12" MinInterval="80000" MaxInterval="90000">
+		<zones>
+			<zone id="1" name="洞穴九方向" backmusic="">
+			</zone>
+		</zones>
+		<weather>
+			<date start="320" end="321">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="20" end="21">
+				<cloud level="3" backmusic=""/>
+			</date>
+			<date start="150" end="152">
+				<cloud level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="118" name="洞穴九层方向" x="18" y="87"/>
+		</exits>
+	</map>
+	<map name="mo1">
+		<zones>
+			<zone id="1" name="征途唯大皇城方向" backmusic="">
+			</zone>
+			<zone id="2" name="地狱二方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="188" name="征途唯大皇城方向" x="115" y="209"/>
+			<exit id="189" name="地狱二层方向" x="133" y="32"/>
+		</exits>
+	</map>
+	<map name="mo2">
+		<zones>
+			<zone id="1" name="地狱一方向" backmusic="">
+			</zone>
+			<zone id="2" name="地狱三方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="190" name="地狱一层方向" x="139" y="19"/>
+			<exit id="191" name="地狱三层方向" x="26" y="128"/>
+		</exits>
+	</map>
+	<map name="mo3">
+		<zones>
+			<zone id="1" name="地狱二方向" backmusic="">
+			</zone>
+			<zone id="2" name="地狱四方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="192" name="地狱二层方向" x="35" y="86"/>
+			<exit id="193" name="地狱四层方向" x="217" y="112"/>
+		</exits>
+	</map>
+	<map name="mo4">
+		<zones>
+			<zone id="1" name="地狱三方向" backmusic="">
+			</zone>
+			<zone id="2" name="地狱五方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="194" name="地狱三层方向" x="201" y="104"/>
+			<exit id="195" name="地狱五层方向" x="35" y="132"/>
+		</exits>
+	</map>
+	<map name="mo5">
+		<zones>
+			<zone id="1" name="地狱四方向" backmusic="">
+			</zone>
+			<zone id="2" name="地狱六方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="196" name="地狱四层方向" x="26" y="137"/>
+			<exit id="197" name="地狱六层方向" x="130" y="90"/>
+		</exits>
+	</map>
+	<map name="mo6">
+		<zones>
+			<zone id="1" name="地狱五方向" backmusic="">
+			</zone>
+			<zone id="2" name="地狱七方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="198" name="地狱五层方向" x="137" y="105"/>
+			<exit id="199" name="地狱七层方向" x="13" y="124"/>
+		</exits>
+	</map>
+	<map name="mo7">
+		<zones>
+			<zone id="1" name="地狱六方向" backmusic="">
+			</zone>
+			<zone id="2" name="地狱八方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="200" name="地狱六层方向" x="25" y="116"/>
+			<exit id="201" name="地狱八层方向" x="102" y="66"/>
+		</exits>
+	</map>
+	<map name="mo8">
+		<zones>
+			<zone id="1" name="地狱七方向" backmusic="">
+			</zone>
+			<zone id="2" name="地狱九方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="202" name="地狱七层方向" x="164" y="57"/>
+			<exit id="203" name="地狱九层方向" x="43" y="166"/>
+		</exits>
+	</map>
+	<map name="mo9">
+		<zones>
+			<zone id="1" name="地狱八方向" backmusic="">
+			</zone>
+			<zone id="2" name="地狱十方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="204" name="地狱八层方向" x="135" y="85"/>
+			<exit id="205" name="地狱十层方向" x="33" y="224"/>
+		</exits>
+	</map>
+	<map name="mo10">
+		<zones>
+			<zone id="1" name="地狱九方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="206" name="地狱九层方向" x="18" y="87"/>
+		</exits>
+	</map>
+	<map name="beijiaomi2">
+		<zones>
+			<zone id="1" name="密室方向"/>
+			<zone id="2" name="密室方向"/>
+		</zones>
+		<exits/>
+	</map>
+	<map name="beijiaomi1">
+		<zones>
+			<zone id="1" name="北郊方向"/>
+		</zones>
+		<exits>
+			<exit id="127" name="北郊方向" x="16" y="105"/>
+			<exit id="128" name="北郊方向" x="70" y="52"/>
+		</exits>
+	</map>
+	<map name="weiyin2">
+		<zones>
+			<zone id="1" name="密室方向"/>
+			<zone id="2" name="密室方向"/>
+		</zones>
+		<exits/>
+	</map>
+	<map name="weiyin1">
+		<zones>
+			<zone id="1" name="凤尾村方向"/>
+		</zones>
+		<exits>
+			<exit id="152" name="凤尾村方向" x="16" y="105"/>
+			<exit id="153" name="凤尾村方向" x="70" y="52"/>
+		</exits>
+	</map>
+	<map name="luanyin1">
+		<zones>
+			<zone id="1" name="征途唯大王城方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="162" name="征途唯大王城方向" x="16" y="105"/>
+			<exit id="163" name="征途唯大王城方向" x="70" y="52"/>
+		</exits>
+	</map>
+	<map name="luanyin2">
+		<zones>
+			<zone id="1" name="密室方向"/>
+			<zone id="2" name="密室方向"/>
+		</zones>
+	</map>
+	<map name="jinyin1">
+		<zones>
+			<zone id="1" name="征途唯大王城方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="164" name="征途唯大王城方向" x="16" y="105"/>
+			<exit id="165" name="征途唯大王城方向" x="70" y="52"/>
+		</exits>
+	</map>
+	<map name="jinyin2">
+		<zones>
+			<zone id="1" name="密室方向"/>
+			<zone id="2" name="密室方向"/>
+		</zones>
+	</map>
+	<map name="jixie1">
+		<zones>
+			<zone id="1" name="机械二方向" backmusic="">
+			</zone>
+			<zone id="2" name="征途唯大皇城方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="210" name="征途唯大皇城方向" x="47" y="235"/>
+			<exit id="211" name="机械二方向" x="380" y="260"/>
+		</exits>
+	</map>
+	<map name="jixie2">
+		<zones>
+			<zone id="1" name="机械一方向" backmusic="">
+			</zone>
+			<zone id="2" name="机械三方向"/>
+		</zones>
+		<exits>
+			<exit id="212" name="机械一方向" x="77" y="111"/>
+			<exit id="213" name="机械三方向" x="148" y="341"/>
+		</exits>
+	</map>
+	<map name="jixie3">
+		<zones>
+			<zone id="1" name="机械二方向" backmusic="">
+			</zone>
+			<zone id="2" name="机械四方向"/>
+		</zones>
+		<exits>
+			<exit id="214" name="机械二方向" x="168" y="13"/>
+			<exit id="215" name="机械四方向" x="33" y="231"/>
+		</exits>
+	</map>
+	<map name="jixie4">
+		<zones>
+			<zone id="1" name="机械三方向" backmusic="">
+			</zone>
+			<zone id="2" name="机械五方向"/>
+		</zones>
+		<exits>
+			<exit id="216" name="机械三方向" x="252" y="100"/>
+			<exit id="217" name="机械五方向" x="93" y="323"/>
+		</exits>
+	</map>
+	<map name="jixie5">
+		<zones>
+			<zone id="1" name="机械四方向" backmusic="">
+			</zone>
+			<zone id="2" name="机械六方向"/>
+		</zones>
+		<exits>
+			<exit id="218" name="机械四方向" x="263" y="145"/>
+			<exit id="219" name="机械六方向" x="8" y="149"/>
+		</exits>
+	</map>
+	<map name="jixie6">
+		<zones>
+			<zone id="1" name="机械五方向" backmusic="">
+			</zone>
+			<zone id="2" name="机械七方向"/>
+		</zones>
+		<exits>
+			<exit id="220" name="机械五方向" x="238" y="161"/>
+			<exit id="221" name="机械七方向" x="9" y="200"/>
+		</exits>
+	</map>
+	<map name="jixie7">
+		<zones>
+			<zone id="1" name="机械六方向" backmusic="">
+			</zone>
+			<zone id="2" name="机械八方向"/>
+		</zones>
+		<exits>
+			<exit id="222" name="机械六方向" x="127" y="306"/>
+			<exit id="223" name="机械八方向" x="183" y="66"/>
+		</exits>
+	</map>
+	<map name="jixie8">
+		<zones>
+			<zone id="1" name="机械七方向" backmusic="">
+			</zone>
+			<zone id="2" name="机械九方向"/>
+		</zones>
+		<exits>
+			<exit id="224" name="机械七方向" x="105" y="304"/>
+			<exit id="225" name="机械九方向" x="193" y="45"/>
+		</exits>
+	</map>
+	<map name="jixie9">
+		<zones>
+			<zone id="1" name="机械八方向" backmusic="">
+			</zone>
+			<zone id="2" name="机械十方向"/>
+		</zones>
+		<exits>
+			<exit id="226" name="机械八方向" x="102" y="311"/>
+			<exit id="227" name="机械十方向" x="200" y="81"/>
+		</exits>
+	</map>
+	<map name="jixie10">
+		<zones>
+			<zone id="1" name="机械九方向" backmusic="">
+			</zone>
+		</zones>
+		<exits>
+			<exit id="228" name="机械九方向" x="328" y="314"/>
+		</exits>
+	</map>
+	<map name="muchang" backmusic="">
+		<zones>
+			<zone id="1" name="征途唯大皇城方向" backmusic="">
+			</zone>
+			<zone id="2" name="古墓入口" backmusic="">
+			</zone>
+			<zone id="3" name="栖息地" backmusic="ZLmc.mp3" Priority="12" MinInterval="38000" MaxInterval="60000"/>
+		</zones>
+		<weather>
+			<date start="195" end="240">
+				<rain level="2" backmusic="weather-rainl.WAV"/>
+			</date>
+			<date start="320" end="325">
+				<cloud level="2" backmusic=""/>
+			</date>
+			<date start="150" end="180">
+				<rain level="1" backmusic="weather-rainx.WAV"/>
+			</date>
+			<date start="2" end="10">
+				<snow level="1" backmusic=""/>
+			</date>
+		</weather>
+		<exits>
+			<exit id="230" name="征途唯大皇城方向" x="43" y="64"/>
+			<exit id="231" name="古墓入口" x="31" y="172"/>
+		</exits>
+	</map>
+	<map name="shengshou1">
+		<zones>
+			<zone id="1" name="征途唯大皇城方向" backmusic="">
+			</zone>
+			<zone id="2" name="巢穴二层方向" backmusic="">
+			</zone>
+			<zone id="3" name="巢穴二层方向" backmusic="">
+			</zone>
+			<zone id="4" name="巢穴二层方向" backmusic="">
+			</zone>
+			<zone id="5" name="巢穴二层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="shengshou2">
+		<zones>
+			<zone id="1" name="巢穴一层方向" backmusic="">
+			</zone>
+			<zone id="2" name="巢穴一层方向" backmusic="">
+			</zone>
+			<zone id="3" name="巢穴一层方向" backmusic="">
+			</zone>
+			<zone id="4" name="巢穴一层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="shengshou13">
+		<zones>
+			<zone id="1" name="征途唯大皇城方向" backmusic="">
+			</zone>
+			<zone id="2" name="巢穴四层方向" backmusic="">
+			</zone>
+			<zone id="3" name="巢穴四层方向" backmusic="">
+			</zone>
+			<zone id="4" name="巢穴四层方向" backmusic="">
+			</zone>
+			<zone id="5" name="巢穴四层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="shengshou14">
+		<zones>
+			<zone id="1" name="巢穴三层方向" backmusic="">
+			</zone>
+			<zone id="2" name="巢穴三层方向" backmusic="">
+			</zone>
+			<zone id="3" name="巢穴三层方向" backmusic="">
+			</zone>
+			<zone id="4" name="巢穴三层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="gumu">
+		<zones>
+			<zone id="1" name="栖息地方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="wangmu1">
+		<zones>
+			<zone id="1" name="征途唯大皇城方向" backmusic="">
+			</zone>
+			<zone id="2" name="二层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="wangmu2">
+		<zones>
+			<zone id="1" name="一层方向" backmusic="">
+			</zone>
+			<zone id="2" name="三层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="wangmu3">
+		<zones>
+			<zone id="1" name="四层方向" backmusic="">
+			</zone>
+			<zone id="2" name="二层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="wangmu4">
+		<zones>
+			<zone id="1" name="三层方向" backmusic="">
+			</zone>
+			<zone id="2" name="五层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="wangmu5">
+		<zones>
+			<zone id="1" name="四层方向" backmusic="">
+			</zone>
+			<zone id="2" name="六层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="wangmu6">
+		<zones>
+			<zone id="1" name="五层方向" backmusic="">
+			</zone>
+			<zone id="2" name="七层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="wangmu7">
+		<zones>
+			<zone id="1" name="六层方向" backmusic="">
+			</zone>
+			<zone id="2" name="八层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="wangmu8">
+		<zones>
+			<zone id="1" name="七层方向" backmusic="">
+			</zone>
+			<zone id="2" name="九层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="wangmu9">
+		<zones>
+			<zone id="1" name="八层方向" backmusic="">
+			</zone>
+			<zone id="2" name="十层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="wangmu10">
+		<zones>
+			<zone id="1" name="九层方向" backmusic="">
+			</zone>
+		</zones>
+		<weather/>
+	</map>
+	<map name="myin2">
+		<zones>
+			<zone id="1" name="密室方向"/>
+			<zone id="2" name="密室方向"/>
+		</zones>
+		<exits/>
+	</map>
+	<map name="myin1">
+		<zones>
+			<zone id="1" name="栖息地方向"/>
+		</zones>
+		<exits>
+			<exit id="240" name="栖息地方向" x="16" y="105"/>
+			<exit id="241" name="栖息地方向" x="70" y="52"/>
+		</exits>
+	</map>
+	<map name="wyin2">
+		<zones>
+			<zone id="1" name="密室方向"/>
+			<zone id="2" name="密室方向"/>
+		</zones>
+		<exits/>
+	</map>
+	<map name="wyin1">
+		<zones>
+			<zone id="1" name="滨海之岛方向"/>
+		</zones>
+		<exits>
+			<exit id="242" name="滨海之岛方向" x="16" y="105"/>
+			<exit id="243" name="滨海之岛方向" x="70" y="52"/>
+		</exits>
+	</map>
+	<map name="jyin2">
+		<zones>
+			<zone id="1" name="密室方向"/>
+			<zone id="2" name="密室方向"/>
+		</zones>
+		<exits/>
+	</map>
+	<map name="jyin1">
+		<zones>
+			<zone id="1" name="机械工厂方向"/>
+		</zones>
+		<exits>
+			<exit id="244" name="机械工厂方向" x="16" y="105"/>
+			<exit id="245" name="机械工厂方向" x="70" y="52"/>
+		</exits>
+	</map>
+	<map name="juedouchang">
+		<zones>
+			<zone id="1" name="角斗场"/>
+		</zones>
+	</map>
+	<map name="anyicun">
+		<zones>
+			<zone id="1" name="征途唯大王城方向"/>
+		</zones>
+	</map>
+	<map name="jingjidao">
+		<zones>
+			<zone id="1" name="经验区"/>
+			<zone id="2" name="二倍经验区"/>
+			<zone id="3" name="四倍经验区"/>
+			<zone id="4" name="四倍经验区"/>
+			<zone id="5" name="四倍经验区"/>
+		</zones>
+	</map>
+	<map name="jingjidao2">
+		<zones>
+			<zone id="1" name="经验区"/>
+			<zone id="2" name="二倍经验区"/>
+			<zone id="3" name="四倍经验区"/>
+			<zone id="4" name="四倍经验区"/>
+			<zone id="5" name="四倍经验区"/>
+		</zones>
+	</map>
+	<map name="jingjidao3">
+		<zones>
+			<zone id="1" name="经验区"/>
+			<zone id="2" name="二倍经验区"/>
+			<zone id="3" name="四倍经验区"/>
+			<zone id="4" name="四倍经验区"/>
+			<zone id="5" name="四倍经验区"/>
+		</zones>
+	</map>
+	<map name="banghui">
+		<zones>
+			<zone id="1" name="1号竞技场"/>
+			<zone id="2" name="2号竞技场"/>
+			<zone id="3" name="3号竞技场"/>
+			<zone id="4" name="4号竞技场"/>
+		</zones>
+	</map>
+	<map name="jiazu">
+		<zones>
+			<zone id="1" name="1号竞技场"/>
+			<zone id="2" name="2号竞技场"/>
+			<zone id="3" name="3号竞技场"/>
+			<zone id="4" name="4号竞技场"/>
+			<zone id="5" name="5号竞技场"/>
+			<zone id="6" name="6号竞技场"/>
+			<zone id="7" name="7号竞技场"/>
+			<zone id="8" name="8号竞技场"/>
+			<zone id="9" name="9号竞技场"/>
+			<zone id="10" name="10号竞技场"/>
+			<zone id="11" name="11号竞技场"/>
+			<zone id="12" name="12号竞技场"/>
+			<zone id="13" name="13号竞技场"/>
+			<zone id="14" name="14号竞技场"/>
+			<zone id="15" name="15号竞技场"/>
+			<zone id="16" name="16号竞技场"/>
+			<zone id="17" name="17号竞技场"/>
+			<zone id="18" name="18号竞技场"/>
+			<zone id="19" name="19号竞技场"/>
+			<zone id="20" name="20号竞技场"/>
+		</zones>
+	</map>
+	<map name="geren">
+		<zones>
+			<zone id="1" name="1号竞技场"/>
+			<zone id="2" name="2号竞技场"/>
+			<zone id="3" name="3号竞技场"/>
+			<zone id="4" name="4号竞技场"/>
+			<zone id="5" name="5号竞技场"/>
+			<zone id="6" name="6号竞技场"/>
+			<zone id="7" name="7号竞技场"/>
+			<zone id="8" name="8号竞技场"/>
+			<zone id="9" name="9号竞技场"/>
+			<zone id="10" name="10号竞技场"/>
+			<zone id="11" name="11号竞技场"/>
+			<zone id="12" name="12号竞技场"/>
+			<zone id="13" name="13号竞技场"/>
+			<zone id="14" name="14号竞技场"/>
+			<zone id="15" name="15号竞技场"/>
+			<zone id="16" name="16号竞技场"/>
+			<zone id="17" name="17号竞技场"/>
+			<zone id="18" name="18号竞技场"/>
+			<zone id="19" name="19号竞技场"/>
+			<zone id="20" name="20号竞技场"/>
+		</zones>
+	</map>
+	<map name="shiwai">
+		<zones>
+			<zone id="1" backmusic="Shiwai.mp3" name="世外桃源"/>
+			<zone id="2" backmusic="Shiwai.mp3" name="边境方向"/>
+			<zone id="3" backmusic="Shiwai.mp3" name="温泉入口"/>
+			<zone id="4" backmusic="Shiwai.mp3" name="游乐场"/>
+			<zone id="5" backmusic="Shiwai.mp3" name="公寓别墅区"/>
+			<zone id="6" backmusic="Shiwai.mp3" name="宝石采集区"/>
+		</zones>
+	</map>
+	<map name="wenquan1">
+		<zones>
+			<zone id="1" backmusic="Fangjian.mp3" name="男温泉"/>
+		</zones>
+	</map>
+	<map name="wenquan2">
+		<zones>
+			<zone id="1" backmusic="Fangjian.mp3" name="女温泉"/>
+		</zones>
+	</map>
+</maps>
