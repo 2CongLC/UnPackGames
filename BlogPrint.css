@@ -1,0 +1,42 @@
+@media print {
+  /* Ẩn tất cả các phần không cần thiết */
+  body, html {
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+
+    /* Ẩn toàn bộ chân trang và các phần tử không cần thiết khi in */
+  footer, .footer, .item-pagination-prev-next, .comments, .blog-pager {
+    display: none !important;
+  }
+
+  /* Ẩn các phần khác như header, sidebar nếu bạn muốn */
+  header, .sidebar, .comments-section {
+    display: none !important;
+  }
+
+  /* Chỉ hiển thị nội dung bài viết */
+  .post-body {
+    display: block !important;
+    font-family: Arial, sans-serif;
+    color: black;
+    background: white;
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Giữ lại ảnh trong bài viết */
+  .post-body img {
+    display: block !important;
+    max-width: 100%;
+    height: auto;
+  }
+  
+ 
+
+  /* Ẩn nút in bài viết khi in */
+  .print-btn {
+    display: none;
+  }
+  }
